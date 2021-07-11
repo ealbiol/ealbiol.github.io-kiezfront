@@ -7,6 +7,7 @@ import { GlobalContext } from "../Router";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import checkIfLogged from "../Functions/Functions"
+import {BASE_URL} from "../config/config";
 
 
 export default function NeighborhoodProfile() {
@@ -29,7 +30,7 @@ export default function NeighborhoodProfile() {
 
 
     useEffect(() => {
-        const API_NEIGHBORHOODS = `http://localhost:3000/neighborhoods/${nombreBarrio}`
+        const API_NEIGHBORHOODS = `${BASE_URL}neighborhoods/${nombreBarrio}`
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);

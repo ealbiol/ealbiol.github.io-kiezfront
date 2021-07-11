@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
+import {BASE_URL} from "../../config/config";
 
 
 export default function TableCompare(props) {
@@ -14,7 +15,7 @@ export default function TableCompare(props) {
 
 
   useEffect(() => {
-    const API_NEIGHBORHOODS = "http://localhost:3000/neighborhoods/";
+    const API_NEIGHBORHOODS = `${BASE_URL}neighborhoods/`;
     // Inicializando la const token
     const token = localStorage.getItem("ACCESS_TOKEN")
     if (token) setLoggedUser(true);

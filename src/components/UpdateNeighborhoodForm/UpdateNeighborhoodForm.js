@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
 
+import {BASE_URL} from "../../config/config";
 
 
 export default function UpdateNeighborhoodForm() {
@@ -19,7 +20,7 @@ export default function UpdateNeighborhoodForm() {
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
-        const NEIGHBORHOODS = "http://localhost:3000/neighborhoods/";
+        const NEIGHBORHOODS = `${BASE_URL}neighborhoods/`;
         const params = {
             method: "GET",
             headers: {

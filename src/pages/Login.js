@@ -7,6 +7,9 @@ import { useContext } from "react";
  * Login component that allows users to login and get JWT token to access differetn APIS
  * @returns 
  */
+
+ import {BASE_URL} from "../config/config";
+
 export default function Login() {
 
     const initialFormState = { email: "", password: "" };
@@ -20,7 +23,7 @@ export default function Login() {
 
     function LoginClient(e) {
         e.preventDefault();
-        const API_LOGIN = "http://localhost:3000/users/login";
+        const API_LOGIN = `${BASE_URL}users/login`;
         const params = {
             method: "POST",
             body: JSON.stringify(form),

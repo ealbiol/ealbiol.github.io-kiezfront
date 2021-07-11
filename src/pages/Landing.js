@@ -12,6 +12,7 @@ import { GlobalContext } from "../Router";
 // import { faMapMarked } from '@fortawesome/free-solid-svg-icons'
 // <FontAwesomeIcon icon={faMapMarked} size="9x"/> 
 import { useHistory } from "react-router-dom";
+import {BASE_URL} from "../config/config";
 
 
 
@@ -26,7 +27,7 @@ export default function Landing() {
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
-        const API_NEIGHBORHOODS = "http://localhost:3000/neighborhoods/";
+        const API_NEIGHBORHOODS = `${BASE_URL}neighborhoods/`;
         const params = {
             method: "GET",
             headers: {

@@ -13,6 +13,8 @@ import { useForm } from '../../hooks/useForm';
 
 import NeighborhoodsDropDown from "./DropDowns/NeighborhoodsDropDown"
 
+import {BASE_URL} from "../../config/config";
+
 
 export default function DeactivateNeighborhoodForm() {
 
@@ -25,7 +27,7 @@ export default function DeactivateNeighborhoodForm() {
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
-        const NEIGHBORHOODS = "http://localhost:3000/neighborhoods/";
+        const NEIGHBORHOODS = `${BASE_URL}neighborhoods/`;
         const params = {
             method: "GET",
             headers: {

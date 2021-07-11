@@ -1,8 +1,6 @@
 
 // Inicializando la const token
-
-const BASE_URL = "http://localhost:3000"
-
+import {BASE_URL} from "../config/config";
 export function getNeigbourhoodsFromApi(setLoggedUser) {
 
 

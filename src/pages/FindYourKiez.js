@@ -7,6 +7,10 @@ import CustomizedSlider from "../components/CustomizedSlider/CustomizedSlider";
 import { GlobalContext } from "../Router";
 import { useContext } from "react";
 import { useCallback } from 'react'
+import {BASE_URL} from "../config/config";
+
+
+
 export default function FindYourKiez() {
 
   //useContext: Recibiendo desde Router 'setFilteredResultGlobal': (ATERRIZAJE de set para recoger datos)
@@ -515,7 +519,7 @@ export default function FindYourKiez() {
     };
 
 
-    fetch("http://localhost:3000/neighborhoods/filtered", params)
+    fetch(`${BASE_URL}neighborhoods/filtered`, params)
       .then((res) => {
         return res.json();
       })

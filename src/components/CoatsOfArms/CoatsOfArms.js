@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 import checkIfLogged from "../../Functions/Functions"
+import {BASE_URL} from "../../config/config";
 
 
 
@@ -22,7 +23,7 @@ export default function CoatsOfArms({ FilteredResult }) {
 
     const token = checkIfLogged(setLoggedUser, historyButtonFilter)
 
-    const API_COATSOFARMSIMAGES = "http://localhost:3000/coatsofarmsimages/";
+    const API_COATSOFARMSIMAGES = `${BASE_URL}coatsofarmsimages/`;
     const params = {
       method: "GET",
       headers: {

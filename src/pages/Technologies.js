@@ -4,6 +4,7 @@ import { GlobalContext } from "../Router";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import checkIfLogged from "../Functions/Functions"
+import {BASE_URL} from "../config/config";
 
 
 export default function Technologies() {
@@ -21,7 +22,7 @@ export default function Technologies() {
         // Inicializando la const token
         const token = checkIfLogged(setLoggedUser, historyLink)
 
-        const API_TECHNOLOGIES = "http://localhost:3000/technologies/";
+        const API_TECHNOLOGIES = `${BASE_URL}technologies/`;
         const params = {
             method: "GET",
             headers: {

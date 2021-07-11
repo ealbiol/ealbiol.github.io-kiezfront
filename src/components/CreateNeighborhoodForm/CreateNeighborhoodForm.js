@@ -20,6 +20,10 @@ import CitizenAverageAgeDropDown from "./Dropdowns/CitizenAverageAgeDropDown";
 import CinemasAndMuseumsDropDown from "./Dropdowns/CinemasAndMuseumsDropDown"
 
 import { useForm } from '../../hooks/useForm';
+import {BASE_URL} from "../../config/config";
+
+import {BASE_URL} from "../../config/config";
+
 
 export default function CreateNeighborhoodForm() {
 
@@ -27,7 +31,7 @@ export default function CreateNeighborhoodForm() {
 
 
     function addNeighborhood(e) {
-        const API_NEIGHBORHOODS = "http://localhost:3000/adminUsers";
+        const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
         const token = localStorage.getItem("ADMIN_TOKEN")
         e.preventDefault()
         console.log("FORM", form);
@@ -65,7 +69,7 @@ export default function CreateNeighborhoodForm() {
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
-        const API_NEIGHBORHOODS_PROPERTIES = "http://localhost:3000/neighborhoodsProperties/";
+        const API_NEIGHBORHOODS_PROPERTIES = `${BASE_URL}neighborhoodsProperties/`;
         const params = {
             method: "GET",
             headers: {
@@ -88,7 +92,7 @@ export default function CreateNeighborhoodForm() {
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
-        const API_COAT_OF_ARMS_IMAGES = "http://localhost:3000/coatsofarmsimages/";
+        const API_COAT_OF_ARMS_IMAGES = `${BASE_URL}coatsofarmsimages/`;
         const params = {
             method: "GET",
             headers: {

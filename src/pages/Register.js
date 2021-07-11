@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import './Register.scss'
 import { useForm } from '../hooks/useForm';
+import {BASE_URL} from "../config/config";
 
 
 export default function Register() {
@@ -23,7 +24,7 @@ export default function Register() {
 
     function RegisterClient(e) {
         e.preventDefault();
-        const API_REGISTER = "http://localhost:3000/users/register";
+        const API_REGISTER = `${BASE_URL}users/register`;
         const params = {
             method: "POST",
             body: JSON.stringify(form),
