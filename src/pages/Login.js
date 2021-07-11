@@ -34,6 +34,7 @@ export default function Login() {
         fetch(API_LOGIN, params)
             .then((response) => response.json())
             .then((data) => {
+                console.log(data);
                 //alert("Login successful")
                 localStorage.setItem("ACCESS_TOKEN", data.token)    //Creación cookie que contiene el token. El token esta disponible en todo el cliente.
                 if (data.adminToken !== "") {
