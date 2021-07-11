@@ -1,0 +1,19 @@
+@import "../../scss/variables.scss";
+
+.BoxNeighborhoods-main{
+    @include page-style();
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10 1fr);
+    gap: 10px;
+    padding-block: 30px;
+    padding-inline: 30px;
+    background-color: $burgermeister-green;
+
+    &__bn-name{
+        font-size: 15px;
+        background-color: $burgermeister-orange;
+        color: white;
+        @include transition-to-white-bg-green();
+    }
+}

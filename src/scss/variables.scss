@@ -1,0 +1,108 @@
+/* ------------VARIABLE COLORS------------ */
+$burgermeister-green: #053520;
+$burgermeister-white: #faf7f2;
+$burgermeister-orange: #c37314;
+
+
+
+
+/* ------------GOOGLE FONTS------------ */
+
+/* Knock */
+@font-face {font-family: "Knockout 49 Liteweight"; src: url("//db.onlinewebfonts.com/t/a7743f2bbdfd6f14415aca5742e61770.eot"); src: url("//db.onlinewebfonts.com/t/a7743f2bbdfd6f14415aca5742e61770.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a7743f2bbdfd6f14415aca5742e61770.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a7743f2bbdfd6f14415aca5742e61770.woff") format("woff"), url("//db.onlinewebfonts.com/t/a7743f2bbdfd6f14415aca5742e61770.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a7743f2bbdfd6f14415aca5742e61770.svg#Knockout 49 Liteweight") format("svg"); } 
+$font-knockout: "Knockout 49 Liteweight";
+
+//worksans-regular
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+
+
+
+
+/* ------------MIXINS------------ */
+
+@mixin font-worksans-regular(){
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+@mixin motto-style(){
+    font-family: $font-knockout;
+    background-color: $burgermeister-green;
+    font-size: 25px;
+}
+
+@mixin motto-style-no-bg(){
+    font-family: $font-knockout;
+    font-size: 25px;
+}
+
+
+@mixin page-style(){
+    font-family: $font-knockout;
+    background-color: $burgermeister-white;
+}
+
+
+@mixin words-transition-to-orange(){
+    cursor: pointer;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+
+        &:hover{
+            color: #c37314;
+            cursor: pointer;
+        }
+}
+
+
+@mixin transition-to-white-bg-green(){
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+
+    &:hover{
+        background-color: $burgermeister-green;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@mixin border-dashed-orange(){
+    border: 3px dashed $burgermeister-orange
+}
+
+@mixin bg-transition-to-orange(){
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+
+        &:hover{
+            background-color: $burgermeister-orange;
+            cursor: pointer;
+        }
+}
+
+@mixin rotate-box(){
+    animation: rotation 2s infinite linear;
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+            }
+}
+
+@mixin flex-centered(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

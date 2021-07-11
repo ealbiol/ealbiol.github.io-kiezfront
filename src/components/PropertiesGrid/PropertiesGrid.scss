@@ -1,0 +1,55 @@
+@import "../../scss/variables.scss";
+
+.propertiesGrid-parent {
+  @include page-style();
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5 1fr);
+  gap: 25px;
+
+  &__properties-child {
+    font-size: 70px;
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    height: 300px;
+
+    &__centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+    }
+  }
+}
+
+.transition {
+  transition: transform 0.5s;
+}
+
+.transition:hover {
+  transform: scale(1.1);
+  transition-duration: 0.8s, 0.8s;
+}
+
+.property-name {
+  font-size: 50px;
+}
+
+.partyWinner-father-box {
+  // border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.transport-letter {
+  font-size: 200px !important;
+}
+
+.black-font {
+  color: black;
+}

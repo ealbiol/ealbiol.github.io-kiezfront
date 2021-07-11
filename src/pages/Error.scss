@@ -1,0 +1,39 @@
+@import "../scss/variables.scss";
+
+
+.main-error{
+    @include page-style();
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly
+  
+}
+
+
+.main-error-image{
+    @include page-style();
+    flex-grow: 1;
+    @include flex-centered();
+    position: relative;
+    text-align: center;
+    color: white;
+
+    &__centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 110px;
+
+    }
+}
+
+.main-subtext{
+    font-size: 40px;
+    margin-bottom: 60px;
+
+        &__content-subtext{
+            color: rgb(153, 0, 0);
+        }
+}

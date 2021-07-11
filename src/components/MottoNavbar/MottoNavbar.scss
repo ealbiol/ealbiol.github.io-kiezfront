@@ -1,0 +1,35 @@
+@import "../../scss/variables.scss";
+
+
+
+.motto-navbar{
+    @include motto-style();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-right: 10px;
+    padding-left: 290px;
+    padding-bottom: 5px;
+    // &::-moz-selection,
+    // &::selection { border: none }
+        &__inputSearch{
+            @include motto-style();
+            padding: 5px;
+            margin-right: 20px;
+            @include border-dashed-orange();
+            color: white;
+            background-color: $burgermeister-green;
+            font-size: 20px;
+        }
+}
+
+.search-and-arrow{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $burgermeister-orange;
+    font-size: 30px;
+}

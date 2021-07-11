@@ -1,0 +1,42 @@
+@import "../../scss/variables.scss";
+
+.coats-parent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3 1fr);
+    gap: 10px;
+    margin-top: 10px;
+
+        &__coats-child{
+            font-size: 27px;      
+        }
+}
+
+.coat-text{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+
+.numberBox{
+    font-size: 40px;
+}
+
+.districtNameBox{
+    font-size: 20px;
+}
+
+
+.see-results{
+    @include motto-style();
+    color: white;
+    text-decoration: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 40px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom:10px;
+    @include bg-transition-to-orange();
+}

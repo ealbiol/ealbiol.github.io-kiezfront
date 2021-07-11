@@ -1,0 +1,42 @@
+@import "../scss/variables.scss";
+
+.main-backoffice{
+    @include page-style();
+    flex-grow: 1;
+    height: 200vh;
+
+    &__welcome{
+        background-color: black;
+        color: white;
+        display: flex;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 50px;
+    }
+
+    &__bo-navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        
+
+        &__unit{
+            background-color: $burgermeister-green;
+            color: $burgermeister-white;
+            padding: 8px;
+            @include bg-transition-to-orange();
+            cursor: pointer;
+            width:400px;
+        }
+    }
+
+}
+
+.testS{
+    background-color: $burgermeister-orange;
+}

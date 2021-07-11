@@ -1,0 +1,12 @@
+@import "../../scss/variables.scss";
+
+
+
+.motto-rank{
+    @include motto-style();
+
+        &__content{
+            color: white;
+            padding-bottom: 5px
+        }
+}

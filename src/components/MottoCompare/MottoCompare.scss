@@ -1,0 +1,15 @@
+@import "../../scss/variables.scss";
+
+
+.motto-compare{
+    @include motto-style();
+    display: flex;
+
+        &__content {
+            color: white;
+            padding-bottom: 5px;
+            margin-left: 770px;
+          
+            
+        }
+}

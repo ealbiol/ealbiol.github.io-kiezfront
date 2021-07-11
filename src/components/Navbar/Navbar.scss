@@ -1,0 +1,76 @@
+@import "../../scss/variables.scss";
+
+
+.main-navbar{
+
+    @include motto-style();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    // width: 4559px;
+    
+    
+
+        // LEFT CONTENT: lgo and Kiez
+        &__left-content{
+            display: flex;
+            align-items: center;
+            color: white;
+            // margin-right: 1110px;
+
+                &__logo:hover{
+                    color: #c37314;
+                    cursor: pointer;
+                }
+                
+                &__kiezName{
+                    font-size: 50px;
+                    @include words-transition-to-orange();
+                }
+
+                &__landing-welcome{
+                    color: white;
+                    display: flex;
+                    padding-left: 20px;
+                    font-family: $font-knockout;
+                    font-size: 30px;
+                }
+        }
+
+        // RIGHT CONTENT: BUTTONS
+        &__right-content{
+     
+            &__buttonNavbar{
+                @include motto-style();
+                padding: 0;
+                border: none;
+                background: none;
+                color: white;
+                font-size: 40px;
+                padding-left: 5px;
+                padding-right: 5px;
+                cursor: pointer;
+                
+                @include words-transition-to-orange();
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

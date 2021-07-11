@@ -1,0 +1,29 @@
+@import "../scss/variables.scss";
+
+
+.main-compare{
+    @include page-style();
+    flex-grow: 1;
+
+        &__div-buttonCompare{
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            margin-left: 860px;
+            
+
+                &__buttonCompare{
+                    @include motto-style();
+                    border: none;
+                    padding: 10px;
+                    width: 200px;
+                    color: $burgermeister-white;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    @include bg-transition-to-orange()
+                }
+        }
+}

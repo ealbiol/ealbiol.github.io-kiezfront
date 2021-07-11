@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+
+.footer-main{
+    padding: 10px;
+    
+
+    @include motto-style();
+
+        &__footer-right{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+
+                &__buttons-right{
+                    display: flex;
+                    gap: 20px;
+                    
+                        &__button-tecnologies{
+                            @include words-transition-to-orange();
+                        }
+
+                        &__button-footer{
+                            @include words-transition-to-orange();
+                        }
+                }
+        }
+}
+

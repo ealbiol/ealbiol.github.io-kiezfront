@@ -1,0 +1,126 @@
+@import "../../scss/variables.scss";
+
+
+.main-description{
+
+    @include page-style();
+    font-size: 50px;
+    height: 310vh;
+    padding: 40px;
+}
+
+.description-headline{
+    font-size: 90px;
+    padding-top: 50px;
+    color: $burgermeister-green;
+}
+
+.description-subline{
+    color: $burgermeister-green;
+}
+.grid-description{
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    height: 90vh;
+    padding-top: 100px;
+
+
+
+    &__box-image{
+        grid-column: 5 / 15;
+        grid-row: 3 / 20;
+        background-color: blue;
+    }
+
+    &__box-overlaid-1{
+        grid-column: 16/ 25;
+        grid-row: 1 / 4;
+        // background-color: rgb(121, 121, 121);
+        // opacity: 0.5;
+        color: $burgermeister-orange;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        font-size: 70px;
+    }
+
+    &__box-overlaid-2{
+        grid-column: 16/ 25;
+        grid-row: 4 / 7;
+        // background-color: rgb(255, 0, 0);
+        // opacity: 0.5;
+        color: $burgermeister-orange;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        font-size: 70px;
+    }
+    
+    &__box-overlaid-3{
+        grid-column: 16/ 25;
+        grid-row: 7 / 10;
+        // background-color: rgb(229, 255, 0);
+        // opacity: 0.5;
+        color: $burgermeister-orange;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        font-size: 70px;
+    }
+
+    &__box-overlaid-4{
+        grid-column: 16/ 25;
+        grid-row: 10 / 13;
+        // background-color: rgb(0, 255, 157);
+        // opacity: 0.5;
+        color: $burgermeister-orange;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        font-size: 70px;
+    }
+
+    &__box-text{
+        grid-column: 17 / 25;
+        grid-row: 18 / 30;
+        // background-color: rgb(0, 255, 115);
+        // opacity: 0.5;
+        color: $burgermeister-green;
+        z-index: 1;
+        font-size: 30px;
+        @include font-worksans-regular();
+    }
+
+
+
+}
+
+.paragraph-box{
+
+padding-left: 400px;
+padding-right: 400px;
+padding-top: 80px;
+
+    &__text-title{
+        font-size: 25px;
+        margin-bottom: 20px;
+        @include font-worksans-regular();
+    }
+
+    &__text-content{
+        font-size: 18px;
+        @include font-worksans-regular();
+
+    }
+
+}
+
+.two-images{
+    padding-top: 75px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+

@@ -1,0 +1,50 @@
+@import "../../scss/variables.scss";
+
+.main-motto-landing{
+    @include motto-style-no-bg();
+    color: white;
+    font-size: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    
+    &__texts-box{
+        
+        margin-bottom: 220px;
+
+        &__div-orange{
+            color: $burgermeister-orange;
+            &:hover{
+                cursor: pointer;
+                color: #fab055;
+            }
+        }
+    }
+    
+}
+
+// .logo{
+//     background-image: url(../../images/Tor-Folie.png);
+//     background-repeat: no-repeat;
+//     // background-size: 1100px;
+//     // background-position: 420px 30px;
+
+//     background-size: 700px;
+//     background-position: 920px 330px;
+    
+// }
+
+.videoTag{
+    position: "absolute";
+    width: "100%";
+    left: "50%";
+    top: "50%";
+    height: "100%";
+    object-fit: "cover";
+    transform: "translate(-50%, -50%)";
+    z-index: "1";
+    
+}

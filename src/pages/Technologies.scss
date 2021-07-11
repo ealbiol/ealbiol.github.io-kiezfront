@@ -1,0 +1,55 @@
+@import "../scss/variables.scss";
+
+.main-technologies{
+    @include page-style();
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5 1fr);
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $burgermeister-green;
+    border: 3px solid $burgermeister-orange;
+    @include bg-transition-to-orange();
+    
+
+    &__property-box{
+        display: flex;
+        justify-content: center;
+        align-items: space;
+        flex-direction: column;
+
+        &__techName{
+            font-size: 40px;
+            color: $burgermeister-white;
+        }
+
+        &__sub-techName{
+            font-size: 30px;
+            color: $burgermeister-green;
+  
+        }
+
+        &__technology-image{
+            cursor: pointer;
+        } 
+    }
+
+              
+}
+
+.propertiesGrid-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-grow: 1;
+
+
+}
+
+
+
+
+

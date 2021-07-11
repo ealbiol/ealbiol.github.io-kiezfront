@@ -1,0 +1,106 @@
+@import "../scss/variables.scss";
+
+
+
+
+.register-main{
+    @include page-style();
+    display: flex;
+    flex-grow: 1;
+    background-color: $burgermeister-white;
+    font-size: 25px;
+
+        &__register-image-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+
+                &__image-left-clip-path{
+                    /* clip-path: ellipse(530px 540px at 10% 20%); */
+                    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                }
+        }
+
+        &__textContent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+                &__fillable-form{
+                    display: flex;
+                    justify-content: space-between;
+
+                        &__labels-box{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            font-size: 40px;
+                        }
+
+                        &__inputs-box{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                            margin-bottom: 30px;
+
+                                &__register-input{
+                                    @include page-style();
+                                    @include border-dashed-orange();
+                                    padding: 8px;
+                                    font-size: 25px;
+                                }
+                        }
+                }
+
+                &__register-buttons{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+
+                        &__green-button-send{
+                            @include motto-style();
+                            border: none;
+                            padding: 10px;
+                            width: 200px;
+                            color: white;
+                            font-size: 30px;
+                        
+                            @include bg-transition-to-orange();
+                        }
+
+                        &__green-button-reset{
+                            @include motto-style();
+                            border: none;
+                            padding: 10px;
+                            width: 200px;
+                            color: white;
+                            font-size: 30px;
+                            @include bg-transition-to-orange();
+                        }
+
+                        &__login-button-register:hover{
+                            cursor: pointer;
+                        }
+                }
+                
+        }
+
+        &__register-image-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+
+                &__image-right-clip-path{
+                    /* clip-path: ellipse(530px 540px at 10% 20%); */
+                    clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+                    
+                }
+        }
+        
+}

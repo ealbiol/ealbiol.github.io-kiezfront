@@ -1,0 +1,101 @@
+@import "../../scss/variables.scss";
+
+
+
+.main-TableCompare{
+    @include page-style();
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+        &__inputCompareBox{
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+                &__inputCompare{
+                    @include page-style();
+                    padding: 5px;
+                    margin-left: 40px;
+                    @include border-dashed-orange();
+                    color: black;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    width: 147px;
+                }
+        }
+
+        &__fulltable{
+            padding: 5px;
+            
+
+                &__propertiesBar{
+
+                    &__propertyName{
+                            min-width: 200px;
+                            height: 50px;
+                            color: white;
+                            margin-right: 2px;
+                            padding: 10px;
+                            font-size: 28px;
+                            background-color: $burgermeister-orange;
+                            @include transition-to-white-bg-green();
+                            
+                            
+                        }
+                }
+                &__tbody{
+                    margin-left: 187px;
+                    
+                    &__trCompare{
+                        min-width: 200px;
+                        height: 30px;
+                        border: 1px solid $burgermeister-green;
+
+                            &th{
+                                font-size: 20px;
+                                min-width: 200px;
+                                
+                            }
+                    }
+                    
+                    tr{
+                        //display: flex;
+                        margin-left: 50px !important;
+                        
+                        th{
+                            min-width: 200px;
+                            height: 50px;
+                            margin-right: 2px;
+                            font-size: 28px;
+                            cursor: pointer;
+                        }
+
+                        td{
+                            min-width: 200px;
+                            // height: 30px;
+                            border: 1px solid $burgermeister-green;
+                            font-size: 18px;
+    
+                            @include transition-to-white-bg-green();
+                            
+                            // MOVE TO MIXIN
+                            min-width: 200px;
+                            height: 50px;
+                            margin-right: 2px;
+                            font-size: 28px;
+                            
+
+                            /**
+                            */
+                                
+                        }
+                    }
+                    
+                }   
+                table {
+                    margin-left: 32px; 
+                }
+        }
+}
+

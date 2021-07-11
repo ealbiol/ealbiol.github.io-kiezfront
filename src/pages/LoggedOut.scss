@@ -1,0 +1,35 @@
+@import "../scss/variables.scss";
+
+.LoggedOut-main{
+    @include page-style();
+    display: flex;
+    flex-grow: 1;
+    
+}
+
+.login-main__login-image-left-loggedOut{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+            &__image-left-clip-path{
+                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                
+            }
+}
+
+.login-main__login-image-right-loggedOut{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        
+            &__image-right-clip-path{
+            /* clip-path: ellipse(530px 540px at 10% 20%); */
+            clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+            
+        }
+}

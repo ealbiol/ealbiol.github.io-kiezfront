@@ -1,0 +1,32 @@
+@import "../../../scss/variables.scss";
+
+.modal-grid{
+    @include page-style();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3 1fr);
+   
+    justify-content: center;
+    align-items: center;
+    
+}
+.districts-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-modal{
+    font-family: $font-knockout;
+}
+.districts-menu:hover{
+    background-color: rgb(197, 219, 223, 0.8);
+    cursor: pointer;
+}
+.modal-dialog{
+    max-width: 1000px;
+}
+.btn{
+    width: 210px;
+}

@@ -1,0 +1,25 @@
+@import "../scss/variables.scss";
+
+
+.main-rank{
+    @include page-style();
+    flex-grow: 1;
+
+        &__div-buttonRank{
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+                &__buttonRank{
+                    @include motto-style();
+                    border: none;
+                    padding: 10px;
+                    width: 200px;
+                    color: $burgermeister-white;
+                    font-size: 30px;
+                    
+                
+
+                    @include bg-transition-to-orange();
+                }
+        }
+}

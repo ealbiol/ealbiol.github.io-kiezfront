@@ -1,0 +1,31 @@
+@import "../scss/variables.scss";
+
+
+.main-FilteredNeighborhoods{
+  @include page-style();
+  flex-grow: 1;
+  color: $burgermeister-green;
+  font-size: 80px;
+  padding-top: 50px;
+}
+
+
+.sub-main-FilteredNeighborhoods {
+  @include page-style();
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 150px;
+  padding: 100px;
+  
+    &__singleElement{
+      background-color: $burgermeister-white;
+      color: $burgermeister-green;
+      font-size: 50px;
+      height: 300px;
+      border: 2px solid $burgermeister-green;
+      @include transition-to-white-bg-green();
+    }
+ 
+}
+

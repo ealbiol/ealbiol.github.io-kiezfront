@@ -1,0 +1,67 @@
+@import "../scss/variables.scss";
+
+
+.main-separator{
+    display: flex;
+    flex-grow: 1;
+}
+
+.findYourKiez-main{
+    @include page-style();
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+        &__rangesbox{
+            
+                &__title-ranges{
+                    font-size: 40px;
+                    color: $burgermeister-green;
+                    padding:15px;
+                }
+            
+                &__sub-rangesbox{
+                    width: 780px;
+                    margin: 10px;
+                    height: 610px;
+                    padding-top: 40px;
+                    padding-right: 70px;
+                    justify-content: space-between;
+                    overflow: auto;
+                    scrollbar-color: #badbc3 $burgermeister-white;
+                    
+
+                        &__rangeUnite{
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 30px;
+                            margin-left: 20px;
+                            
+                        }
+                        .range-width{
+                            width: 300px;
+                        }
+                }
+
+                &__buttonFind{
+                    @include motto-style();
+                    color: white;
+                    text-decoration: none;
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    font-size: 40px;
+                    border: none;
+                    margin-top: 10px;
+                    @include bg-transition-to-orange();
+                }
+                
+        }
+
+        &__empty1{
+            display: flex;
+            // justify-content: center;
+            // align-items: center;
+            padding: 15px;
+            flex-grow: 1;
+        }
+}
