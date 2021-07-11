@@ -22,7 +22,6 @@ import CinemasAndMuseumsDropDown from "./Dropdowns/CinemasAndMuseumsDropDown"
 import { useForm } from '../../hooks/useForm';
 import {BASE_URL} from "../../config/config";
 
-import {BASE_URL} from "../../config/config";
 
 
 export default function CreateNeighborhoodForm() {
