@@ -33,3 +33,17 @@
             
         }
 }
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+
+    .login-main__login-image-left-loggedOut{
+        visibility: hidden;
+        width: 0px;
+    }
+
+    .login-main__login-image-right-loggedOut{
+        visibility: hidden;
+        width: 0px;
+    }
+}

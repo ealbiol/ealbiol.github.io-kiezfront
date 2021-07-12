@@ -148,15 +148,19 @@ padding-top: 80px;
 
 
 
+
+
+
+
 @media (max-width: $breakpoint-Samsung-S10){
    
     .main-description{
-    height: 750vh;
+    height: 650vh;
     width: $breakpoint-Samsung-S10;
     padding: 25px;
 
         &__description-headline{
-            font-size: 80px;
+            font-size: 90px;
         }
 
         &__description-subline{

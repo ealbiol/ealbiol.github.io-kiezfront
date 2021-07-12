@@ -104,3 +104,24 @@
         }
         
 }
+
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+
+    .register-main{
+        width: $breakpoint-Samsung-S10;
+        padding: 10px;
+
+    }
+
+    .register-main__register-image-left__image-left-clip-path{
+        visibility: hidden;
+        width: 0px;
+    }
+
+    .register-main__register-image-right__image-right-clip-path{
+        visibility: hidden;
+        width: 0px;
+    }
+}

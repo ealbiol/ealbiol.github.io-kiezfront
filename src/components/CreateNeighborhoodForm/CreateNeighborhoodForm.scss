@@ -38,3 +38,22 @@
 
 
 
+@media (max-width: $breakpoint-Samsung-S10){
+
+    .main-form{
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    .form-input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width:400px;
+    }
+
+}
+
+

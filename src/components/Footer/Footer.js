@@ -21,10 +21,9 @@ export default function Footer() {
             <nav className="footer-main" >
 
                 <nav className="footer-main__footer-right">
-                    <img src="" alt=" " />
+                    <div></div>
                     <div className="footer-main__footer-right__buttons-right" >
                         <div onClick={handleClickTecnologies} className="footer-main__footer-right__buttons-right__button-tecnologies" >TECNOLOGIES USED</div>
-                        {/* <div className="footer-main__footer-right__buttons-right__button-footer" ><b >FOOTER</b></div> */}
                     </div>
                 </nav>
 

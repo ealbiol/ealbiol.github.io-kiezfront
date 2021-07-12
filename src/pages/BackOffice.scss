@@ -40,3 +40,17 @@
 .testS{
     background-color: $burgermeister-orange;
 }
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+    
+    .main-backoffice{
+        width: $breakpoint-Samsung-S10;
+        height: 300vh;
+
+        &__bo-navbar{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

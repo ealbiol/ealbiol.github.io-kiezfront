@@ -33,3 +33,20 @@
     color: $burgermeister-orange;
     font-size: 30px;
 }
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+    
+    .motto-navbar{
+        width: $breakpoint-Samsung-S10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .search-and-arrow{
+        margin-top: 50px;
+    }
+}
