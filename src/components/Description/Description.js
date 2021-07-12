@@ -31,8 +31,8 @@ export default function Description() {
             </div>
 
             <div className="two-images" >
-                <img width="550px" src="https://images.unsplash.com/photo-1592384773244-7bcb166042d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80" alt="" />
-                <img width="550px" src="https://images.unsplash.com/photo-1561364216-fa838594e8a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="" />
+                <img className="two-images__image1-in-description" width="550px" src="https://images.unsplash.com/photo-1592384773244-7bcb166042d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80" alt="" />
+                <img className="two-images__image2-in-description" width="550px" src="https://images.unsplash.com/photo-1561364216-fa838594e8a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="" />
             </div>
 
             <div className="paragraph-box " >

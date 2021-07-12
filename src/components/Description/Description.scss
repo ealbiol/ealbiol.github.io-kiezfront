@@ -151,8 +151,9 @@ padding-top: 80px;
 @media (max-width: $breakpoint-Samsung-S10){
    
     .main-description{
-
-        width: $breakpoint-Samsung-S10;
+    height: 750vh;
+    width: $breakpoint-Samsung-S10;
+    padding: 25px;
 
         &__description-headline{
             font-size: 80px;
@@ -214,6 +215,43 @@ padding-top: 80px;
             grid-row: 4 / 16;
             font-size: 50px;
             color: $burgermeister-green;
+        }
+
+        &__box-text{
+            font-size: 20px;
+            grid-column: 1 / 25;
+            grid-row: 18 / 30;
+            color: $burgermeister-green;
+            margin-top: 20px;
+        }
+    }
+
+    .paragraph-box{
+
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 80px;
+        font-size: 10px;
+        
+
+        &__text-title{
+            font-size: 27px;
+            margin-bottom: 20px;
+            @include font-worksans-regular(); 
+        }
+    }
+
+    .two-images{
+        display: flex;
+        flex-direction: column;
+
+        &__image1-in-description{
+            width: 400px;
+        }
+
+        &__image2-in-description{
+            width: 400px;
+            
         }
     }
 
