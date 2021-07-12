@@ -76,6 +76,7 @@
 
 .main-navbar{
     justify-content: center;
+    
 }
 
 .main-navbar__left-content{
@@ -86,6 +87,10 @@
 .main-navbar__right-content{
     display: flex;
     flex-direction: column;
+    
+    &__buttonNavbar{
+        //font-size: 25px;
+    }
 }
 
 

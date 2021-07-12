@@ -4,16 +4,17 @@ export default function Description() {
     return (
         <div className="main-description " >
 
-            <div className="description-headline " >JUST LANDED FROM TEGEL</div>
-            <div className="description-subline " >Now, where shall I go?</div>
+            <div className="main-description__description-headline " >JUST LANDED FROM TEGEL</div>
+            <div className="main-description__description-subline " >Now, where shall I go?</div>
 
 
             <div className="grid-description " >
                 <img width="700px" className="grid-description__box-image" src="https://images.unsplash.com/photo-1542919868-03bf89eedf20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" alt="Descripcion web" />
                 <div className="grid-description__box-overlaid-1">NÄCHSTE STATION...</div>
                 <div className="grid-description__box-overlaid-2">MITTE</div>
-                <div className="grid-description__box-overlaid-3">PRENZLAUER BERG</div>
+                <div className="grid-description__box-overlaid-3">WITTENAU</div>
                 <div className="grid-description__box-overlaid-4">KREUZBERG</div>
+                <div className="grid-description__box-overlaid-5">NEUKÖLLN</div>
 
                 <div className="grid-description__box-text"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate cumque deserunt optio molestiae, quasi accusantium ex ullam unde? Dolor, maxime. Asperiores exercitationem voluptatem fuga optio ut rem natus!</b></div>
             </div>

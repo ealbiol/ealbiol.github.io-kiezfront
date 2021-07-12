@@ -18,3 +18,20 @@
 }
 
 
+@media (max-width: $breakpoint-Samsung-S10){
+
+
+.landing-main{
+    
+    width: 360px;
+
+    //Hiding YouTube video
+    &__video-landing{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+    
+}

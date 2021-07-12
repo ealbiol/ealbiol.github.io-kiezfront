@@ -98,9 +98,9 @@
 @media (max-width: $breakpoint-Samsung-S10){
     
 .login-main{
-
+    width:$breakpoint-Samsung-S10 ;
     padding: 10px;
-   height: 75vh;
+   height: 90vh;
     
     &__login-image-left{
         visibility: hidden;

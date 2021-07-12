@@ -94,6 +94,7 @@ export default function Landing() {
 
                     <YoutubeBackground
                         videoId={youtubeID}
+                        className="landing-main__video-landing"
                     >
 
 
