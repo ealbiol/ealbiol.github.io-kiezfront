@@ -166,6 +166,7 @@ padding-top: 80px;
 
 
     .grid-description{
+        width: $breakpoint-Samsung-S10;
         display: grid;
         grid-template-columns: repeat(30, 1fr);
         grid-template-rows: repeat(30, 1fr);
