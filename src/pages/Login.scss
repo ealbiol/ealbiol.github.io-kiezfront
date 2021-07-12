@@ -92,3 +92,31 @@
             }
     }
 }
+
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+    
+.login-main{
+
+    padding: 10px;
+   height: 75vh;
+    
+    &__login-image-left{
+        visibility: hidden;
+        width: 0px;
+    }
+
+    &__login-image-right{
+        visibility: hidden;
+        width: 0px;
+    }
+
+    &__form-title{
+        font-size: 45px;
+    }
+
+}
+
+
+}

@@ -77,7 +77,7 @@ export default function Login() {
                 <form action="">
 
 
-                    <h1>
+                    <h1 className="login-main__textContent__form-title" >
                         Log in to your account here
                     </h1>
 
