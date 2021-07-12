@@ -155,7 +155,7 @@ padding-top: 80px;
         width: $breakpoint-Samsung-S10;
 
         &__description-headline{
-            font-size: 60px;
+            font-size: 80px;
         }
 
         &__description-subline{
@@ -175,7 +175,7 @@ padding-top: 80px;
         &__box-image{
             grid-column: 1 / 15;
             grid-row: 4 / 20;
-            width: 280px;
+            width: 400px;
         }
 
         &__box-overlaid-1{
@@ -190,28 +190,28 @@ padding-top: 80px;
         &__box-overlaid-2{
             grid-column: 2/ 25;
             grid-row: 1 / 7;
-            font-size: 40px;
+            font-size: 50px;
             color: $burgermeister-green;
         }
 
         &__box-overlaid-3{
             grid-column: 2/ 25;
-            grid-row: 1 / 10;
-            font-size: 40px;
+            grid-row: 2 / 10;
+            font-size: 50px;
             color: $burgermeister-green;
         }
 
         &__box-overlaid-4{
             grid-column: 2/ 25;
-            grid-row: 1 / 13;
-            font-size: 40px;
+            grid-row: 3 / 13;
+            font-size: 50px;
             color: $burgermeister-green;
         }
 
         &__box-overlaid-5{
             grid-column: 2/ 25;
-            grid-row: 1 / 16;
-            font-size: 40px;
+            grid-row: 4 / 16;
+            font-size: 50px;
             color: $burgermeister-green;
         }
     }
