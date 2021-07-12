@@ -8,7 +8,7 @@ export function getNeigbourhoodsFromApi(setLoggedUser) {
 
     const token = localStorage.getItem("ACCESS_TOKEN")
     if (token) setLoggedUser(true);
-    const API_NEIGHBORHOODS = `${BASE_URL}/neighborhoods/`
+    const API_NEIGHBORHOODS = `${BASE_URL}neighborhoods/`
     const params = {
         method: "GET",
         headers: {

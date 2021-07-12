@@ -1,13 +1,16 @@
 import "./Navbar.scss"
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import icon from "../../images/icon2.svg"
-
-
+import { Container, Row, Col } from "react-bootstrap";
 export default function Navbar({ loggedUser, setLoggedUser }) {
+
+    const [userName, setUserName] = useState("");
+
+
 
     //History Button Compare
     const historyCompare = useHistory()
-
     function handleClickCompare() {
         historyCompare.push("/compare")
     }
@@ -20,6 +23,9 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
         historyRank.push("/rank")
     }
 
+    useEffect(() => {
+            setUserName(localStorage?.getItem("USER_NAME")?.toUpperCase())
+      }, [localStorage, setUserName]) 
 
     //History Button FindYourKiez
     const historyFindYourKiez = useHistory()
@@ -73,10 +79,14 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
     }
 
     return (
+       
         <nav className="">
+           
 
+          
+           
             <nav className="main-navbar" >
-
+              
                 {/* LEFT SIDE */}
                 <nav className="main-navbar__left-content">
                     <div onClick={handleGoToLanding} ><b className="main-navbar__left-content__kiezName" >KIEZ</b></div>
@@ -84,13 +94,13 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
 
                     {loggedUser && (
                         <div className="main-navbar__left-content__landing-welcome" >
-                            <div> HI, {localStorage?.getItem("USER_NAME")?.toUpperCase()} ! </div>
+                            <div> HI, {userName} ! </div>
                         </div>
                     )}
 
                 </nav>
-
-
+             
+             
                 {/* RIGHT SIDE */}
                 <nav className="main-navbar__right-content" >
                     <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickCompare} >COMPARE</button>
@@ -111,9 +121,10 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
                         <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickLogout} >LOGOUT</button>
                     )}
                 </nav>
-
+                     
             </nav>
-
+           
+            
         </nav>
     )
 }

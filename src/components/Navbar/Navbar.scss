@@ -1,6 +1,8 @@
 @import "../../scss/variables.scss";
 
-
+.container{
+    max-width: 100% !important;
+}
 .main-navbar{
 
     @include motto-style();
@@ -10,6 +12,7 @@
     padding-left: 25px;
     padding-right: 25px;
     // width: 4559px;
+    width: 100%;
     
     
 
@@ -68,8 +71,28 @@
 
 
 
+@media (max-width: $breakpoint-iphoneX){
 
 
+.main-navbar{
+    justify-content: center;
+}
+
+
+.main-navbar__left-content{
+    visibility: hidden;
+    width: 0px;
+}
+
+.main-navbar__right-content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+}
 
 
 

@@ -45,9 +45,9 @@ export default function Router() {
   return (
     <div className="brouter-father">
       <BrowserRouter>
-        <div>
+        
           <Navbar loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
-        </div>
+        
 
         <div className="brouter-routes">
           <GlobalContext.Provider value={{ FilteredResultGlobal, setFilteredResultGlobal, loggedUser, setLoggedUser }}>   {/* Pasamos por value los estados que queremos enviar a otros componentes */}
