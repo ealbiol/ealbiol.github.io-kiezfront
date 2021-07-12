@@ -71,13 +71,12 @@
 
 
 
-@media (max-width: $breakpoint-iphoneX){
+@media (max-width: $breakpoint-Samsung-S10){
 
 
 .main-navbar{
     justify-content: center;
 }
-
 
 .main-navbar__left-content{
     visibility: hidden;
@@ -88,8 +87,6 @@
     display: flex;
     flex-direction: column;
 }
-
-
 
 
 }
