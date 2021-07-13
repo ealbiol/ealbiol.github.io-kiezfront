@@ -38,3 +38,43 @@
   margin-inline: 350px;
   margin-bottom: 40px;
 }
+
+
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+
+  .main-neghborhoodProfile{
+    width: $breakpoint-Samsung-S10;
+  }
+
+  .main-profile-image {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-block: 80px;
+
+
+    &__img{
+      width: 450px;
+    }
+  
+    &__centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      width: 300px;
+    }
+  }
+
+  .kiez-properties-title{
+    font-size: 70px;
+  }
+
+  .history{
+    width: $breakpoint-Samsung-S10;
+  }
+
+}

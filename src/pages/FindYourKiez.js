@@ -530,6 +530,7 @@ export default function FindYourKiez() {
         console.log(err);
       });
   }, [setLoggedUser, JSONFilter])
+  
   useEffect(() => {
     fetchBarrios();
   }, [fetchBarrios]);
@@ -576,12 +577,14 @@ export default function FindYourKiez() {
             </div>
           </div>
 
-          <button className="findYourKiez-main__rangesbox__buttonFind"
+         {/* <button className="findYourKiez-main__rangesbox__buttonFind"
             onClick={() => fetchBarrios()}
           >
             FIND
           </button>
+            */}
         </div>
+
 
         {/* COATS OF ARMS */}
         <div className="findYourKiez-main__empty1 ">

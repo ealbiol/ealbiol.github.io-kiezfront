@@ -68,7 +68,7 @@ export default function NeighborhoodProfile() {
             {NeighborhoodInfo &&
                 <div>
                     <div className="main-profile-image " >
-                        <img width="1200px" src={NeighborhoodInfo.photo} alt="" />
+                        <img className="main-profile-image__img" width="1200px" src={NeighborhoodInfo.photo} alt="" />
                         <div className="main-profile-image__centered" >{NeighborhoodInfo.name?.toUpperCase()}</div>
                     </div>
 

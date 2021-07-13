@@ -106,7 +106,7 @@ export default function Landing() {
 
                     <MottoNavbar activateBox={activateBox} setActivateBox={setActivateBox} setTyped={setTyped} />
 
-
+                    
                     <BoxNeighborhoods NeighborhoodsDynamic={NeighborhoodsDynamic} activateBox={activateBox} />
 
 

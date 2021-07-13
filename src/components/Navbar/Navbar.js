@@ -2,7 +2,6 @@ import "./Navbar.scss"
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import icon from "../../images/icon2.svg"
-import { Container, Row, Col } from "react-bootstrap";
 export default function Navbar({ loggedUser, setLoggedUser }) {
 
     const [userName, setUserName] = useState("");
@@ -25,7 +24,7 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
 
     useEffect(() => {
             setUserName(localStorage?.getItem("USER_NAME")?.toUpperCase())
-      }, [localStorage, setUserName]) 
+      }, [ setUserName]) 
 
     //History Button FindYourKiez
     const historyFindYourKiez = useHistory()

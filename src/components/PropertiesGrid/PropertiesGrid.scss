@@ -53,3 +53,15 @@
 .black-font {
   color: black;
 }
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+  
+
+  .main-PropertiesGrid{
+    width: $breakpoint-Samsung-S10;
+    
+
+  }
+  
+}

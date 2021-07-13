@@ -4,6 +4,7 @@ export default function PropertiesGrid({ NeighborhoodInfo }) {
   return (
     <div className="main-PropertiesGrid ">
       <div className="propertiesGrid-parent">
+        
         <PropertiesGridElement
           propertyName={NeighborhoodInfo?.district?.name?.toUpperCase()}
           src={NeighborhoodInfo?.district?.image}

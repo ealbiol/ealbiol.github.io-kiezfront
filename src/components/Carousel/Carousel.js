@@ -28,11 +28,11 @@ export default function Carousel() {
 
 
   //History Button
-  const historyTreptow = useHistory();
+  const historyRandomNg = useHistory();
 
-  function handleTreptow(e) {
+  function handleRandomNeighborhood(e) {
     //console.log(e.target.textContent);
-    historyTreptow.push(`/neighborhoodprofile/${e.target.textContent}`);
+    historyRandomNg.push(`/neighborhoodprofile/${e.target.textContent}`);
   }
 
 
@@ -56,23 +56,23 @@ export default function Carousel() {
           <div className="mask">
             <ul>
               <li className="anim1 ">
-                <div className="quote " onClick={(e) => handleTreptow(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
+                <div className="quote " onClick={(e) => handleRandomNeighborhood(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
               </li>
 
               <li className="anim2">
-                <div className="quote " onClick={(e) => handleTreptow(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
+                <div className="quote " onClick={(e) => handleRandomNeighborhood(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
               </li>
 
               <li className="anim3">
-                <div className="quote " onClick={(e) => handleTreptow(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
+                <div className="quote " onClick={(e) => handleRandomNeighborhood(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
               </li>
 
               <li className="anim4">
-                <div className="quote " onClick={(e) => handleTreptow(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
+                <div className="quote " onClick={(e) => handleRandomNeighborhood(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
               </li>
 
               <li className="anim5">
-                <div className="quote " onClick={(e) => handleTreptow(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
+                <div className="quote " onClick={(e) => handleRandomNeighborhood(e)}>{neighborhood[Math.floor(Math.random() * (neighborhood.length))]?.name}</div>
               </li>
 
             </ul>
