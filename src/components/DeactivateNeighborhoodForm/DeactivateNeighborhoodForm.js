@@ -205,7 +205,10 @@ export default function DeactivateNeighborhoodForm() {
                                 <p>{del}</p>
                             )
                         }))}
-                <Button variant="primary" type="submit" size="lg" block>
+
+
+
+                <Button onClick={() => (deleteNeighborhood())} variant="primary" type="submit" size="lg" block>
                     Borrar
                 </Button>
             </Form>
