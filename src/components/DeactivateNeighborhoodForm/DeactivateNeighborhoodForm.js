@@ -197,7 +197,7 @@ export default function DeactivateNeighborhoodForm() {
                         })
                     )
                 }
-                <p>LOS QUE VAMOS A BORRAR</p>
+                <p>NEIGHBORHOODS TO DELETE:</p>
                 {
                     NeighborhoodDelete && (
                         NeighborhoodDelete.map(del => {
