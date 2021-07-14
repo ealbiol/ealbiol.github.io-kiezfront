@@ -65,3 +65,51 @@
             flex-grow: 1;
         }
 }
+
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+    .main-separator{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: $breakpoint-Samsung-S10;
+
+    }
+
+
+    .findYourKiez-main{
+        @include page-style();
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 450px;
+        width: 450px;
+        overflow-x: hidden;
+    
+            &__rangesbox{
+                
+                    &__title-ranges{
+                        font-size: 40px;
+                        color: $burgermeister-green;
+                        width: $breakpoint-Samsung-S10;
+                    }
+                }
+    }
+
+
+
+
+    .findYourKiez-main__rangesbox__sub-rangesbox__rangeUnite{
+        display: flex;
+        flex-direction: column;
+        width: $breakpoint-Samsung-S10;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+
+   
+
+}
+

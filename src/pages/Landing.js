@@ -12,7 +12,7 @@ import { GlobalContext } from "../Router";
 // import { faMapMarked } from '@fortawesome/free-solid-svg-icons'
 // <FontAwesomeIcon icon={faMapMarked} size="9x"/> 
 import { useHistory } from "react-router-dom";
-import {BASE_URL} from "../config/config";
+import { BASE_URL } from "../config/config";
 
 
 
@@ -106,7 +106,7 @@ export default function Landing() {
 
                     <MottoNavbar activateBox={activateBox} setActivateBox={setActivateBox} setTyped={setTyped} />
 
-                    
+
                     <BoxNeighborhoods NeighborhoodsDynamic={NeighborhoodsDynamic} activateBox={activateBox} />
 
 

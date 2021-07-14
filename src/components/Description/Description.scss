@@ -113,6 +113,8 @@
         z-index: 1;
         font-size: 30px;
         @include font-worksans-regular();
+        text-align: justify;
+
     }
 
 
@@ -129,11 +131,14 @@ padding-top: 80px;
         font-size: 25px;
         margin-bottom: 20px;
         @include font-worksans-regular();
+        text-align: justify;
+
     }
 
     &__text-content{
         font-size: 18px;
         @include font-worksans-regular();
+        text-align: justify;
 
     }
 

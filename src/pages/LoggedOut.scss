@@ -4,6 +4,8 @@
     @include page-style();
     display: flex;
     flex-grow: 1;
+
+        
     
 }
 
@@ -45,5 +47,11 @@
     .login-main__login-image-right-loggedOut{
         visibility: hidden;
         width: 0px;
+    }
+
+    .login-main{
+        max-width: 450px;
+        width: 450px;
+        overflow-x: hidden;
     }
 }

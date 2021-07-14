@@ -7,7 +7,7 @@ import CustomizedSlider from "../components/CustomizedSlider/CustomizedSlider";
 import { GlobalContext } from "../Router";
 import { useContext } from "react";
 import { useCallback } from 'react'
-import {BASE_URL} from "../config/config";
+import { BASE_URL } from "../config/config";
 
 
 
@@ -530,7 +530,7 @@ export default function FindYourKiez() {
         console.log(err);
       });
   }, [setLoggedUser, JSONFilter])
-  
+
   useEffect(() => {
     fetchBarrios();
   }, [fetchBarrios]);
@@ -561,23 +561,25 @@ export default function FindYourKiez() {
                     key={index}
                     className="findYourKiez-main__rangesbox__sub-rangesbox__rangeUnite "
                   >
-                    <label htmlFor={`rangeInput${property.name}`}>
+                    <label htmlFor={`rangeInput${property.name}`} className="">
                       {property.name.toUpperCase()}{" "}
                     </label>
 
-                    <CustomizedSlider
-                      property={property}
-                      index={index}
-                      JSONFilter={JSONFilter}
-                      setJSONFilter={setJSONFilter}
-                    />
+                    <div className="" >
+                      <CustomizedSlider
+                        property={property}
+                        index={index}
+                        JSONFilter={JSONFilter}
+                        setJSONFilter={setJSONFilter}
+                      />
+                    </div>
                   </div>
                 );
               })}
             </div>
           </div>
 
-         {/* <button className="findYourKiez-main__rangesbox__buttonFind"
+          {/* <button className="findYourKiez-main__rangesbox__buttonFind"
             onClick={() => fetchBarrios()}
           >
             FIND

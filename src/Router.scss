@@ -133,9 +133,9 @@ Más allé de 100vh se crea un scroll down
 @media (max-width: $breakpoint-Samsung-S10){
 
     #root{
-        max-width: 450px;
-        width: 450px;
-        overflow-x: hidden;
+       // max-width: 450px;
+       // width: 450px;
+      //  overflow-x: hidden;
         
     }
 
