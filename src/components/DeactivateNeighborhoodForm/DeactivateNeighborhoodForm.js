@@ -24,6 +24,7 @@ export default function DeactivateNeighborhoodForm() {
 
     const [NeighborhoodsNameDynamic, setNeighborhoodsNameDynamic] = useState("")
     const [NeighborhoodDelete, setNeighborhoodDelete] = useState([]);
+    const [refresh, setRefresh] = useState(false);
     const { setLoggedUser } = useContext(GlobalContext);
 
     // FETCH NEIGHBORHOODS
@@ -31,7 +32,7 @@ export default function DeactivateNeighborhoodForm() {
         // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
-        const NEIGHBORHOODS = `${BASE_URL}neighborhoods?nombreBarrio`;
+        const NEIGHBORHOODS = `${BASE_URL}neighborhoods`;
         const params = {
             method: "GET",
             headers: {
@@ -45,8 +46,9 @@ export default function DeactivateNeighborhoodForm() {
             .then((data) => {
                 setNeighborhoodsName(data.neighborhoods);
                 setNeighborhoodsNameDynamic(data.neighborhoods)
+                setRefresh(false);
             });
-    }, [setLoggedUser]);
+    }, [setLoggedUser, refresh]);
 
 
 
@@ -67,10 +69,43 @@ export default function DeactivateNeighborhoodForm() {
 
     }
 
+
     function deleteNeighborhood(e) {
         e.preventDefault()
-        console.log("Delete")
+        const token = localStorage.getItem("ACCESS_TOKEN")
+        if (token) setLoggedUser(true);
+        const NEIGHBORHOODS = `${BASE_URL}neighborhoods/deactivate`;
+
+        // Objeto
+        const params = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": token
+            },
+            body: JSON.stringify({
+                NeighborhoodDelete
+            })
+        };
+
+        //console.log("Delete")
+        /* req.body
+         req.headers
+         req.method*/
+        // Pasas el objeto por parametro
+        fetch(NEIGHBORHOODS, params)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setRefresh(true);
+                setNeighborhoodDelete([])
+            });
+
+
     }
+
+
+
     function changeElement(e) {
         console.log("Evento e", e)
         if (e.target.checked) {
@@ -205,7 +240,7 @@ export default function DeactivateNeighborhoodForm() {
                                 <p>{del}</p>
                             )
                         }))}
-                <Button variant="primary" type="submit" size="lg" block>
+                <Button onClick={(e) => (deleteNeighborhood(e))} variant="primary" type="submit" size="lg" block>
                     Borrar
                 </Button>
             </Form>
