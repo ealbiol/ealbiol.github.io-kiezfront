@@ -6,10 +6,7 @@
     flex-direction: column;
     flex-grow: 1;
     
-    //Blocking white spaces
-    max-width: 450px;
-    width: 450px;
-    overflow-x: hidden;
+  
 
         &__content{
             background-color: $burgermeister-white;
@@ -28,6 +25,10 @@
 .landing-main{
     
     width:$breakpoint-Samsung-S10;
+      //Blocking white spaces
+      max-width: 450px;
+      width: 450px;
+      overflow-x: hidden;
 
     //Hiding YouTube video
     &__video-landing{
