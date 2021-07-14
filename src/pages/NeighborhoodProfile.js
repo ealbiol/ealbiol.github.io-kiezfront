@@ -7,7 +7,7 @@ import { GlobalContext } from "../Router";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import checkIfLogged from "../Functions/Functions"
-import {BASE_URL} from "../config/config";
+import { BASE_URL } from "../config/config";
 
 
 export default function NeighborhoodProfile() {
@@ -68,7 +68,7 @@ export default function NeighborhoodProfile() {
             {NeighborhoodInfo &&
                 <div>
                     <div className="main-profile-image " >
-                        <img className="main-profile-image__img" width="1200px" src={NeighborhoodInfo.photo} alt="" />
+                        <img className="main-profile-image__img" width="1400px" src={NeighborhoodInfo.photo} alt="" />
                         <div className="main-profile-image__centered" >{NeighborhoodInfo.name?.toUpperCase()}</div>
                     </div>
 

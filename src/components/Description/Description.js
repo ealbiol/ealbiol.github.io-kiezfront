@@ -1,4 +1,7 @@
 import "./Description.scss";
+// import Instagram from "../InstagramEmbed/Instagram";
+import Pinterest from "../Pinterest/Pinterest"
+
 
 export default function Description() {
     return (
@@ -40,6 +43,8 @@ export default function Description() {
                 <div className="paragraph-box__text-content" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem rem consequuntur aspernatur. Ex impedit hic nobis inventore necessitatibus praesentium quidem ad! Neque, exercitationem at deleniti pariatur nulla, impedit quae repellendus perspiciatis sapiente numquam ipsa eos aliquid odio eaque necessitatibus modi tempore quibusdam nam incidunt ad commodi, laborum quod consequatur. Molestiae recusandae sapiente architecto fugit dicta, beatae libero eius quisquam facilis ratione modi. Porro nulla quaerat fuga. Neque, aspernatur rem animi repudiandae labore dolorem officiis quisquam tempora praesentium dolorum maiores excepturi, nisi amet quibusdam impedit enim sequi dolores eum, necessitatibus iure. Dolor ratione repellat corporis sint, laborum labore perspiciatis porro aut, vitae exercitationem nulla molestias. Blanditiis ea laudantium consequuntur tempora incidunt quibusdam quas, nulla, nesciunt provident accusamus dolores atque consequatur earum odit veniam delectus, cupiditate dolore nobis maiores sint libero.</div>
             </div>
 
+            {/* <Instagram />*/}
+            <Pinterest />
         </div >
     )
 }
