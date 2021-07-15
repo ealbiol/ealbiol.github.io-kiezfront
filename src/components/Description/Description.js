@@ -7,8 +7,8 @@ export default function Description() {
     return (
         <div className="main-description " >
             <div className="main-description-width-padding" >
-                <div className="main-description__description-headline " >JUST LANDED FROM TEGEL</div>
-                <div className="main-description__description-subline " >Now, where shall I go?</div>
+                <div className="main-description__description-headline " >  DAS MACHT DIE BERLINER LUFT!</div>
+                <div className="main-description__description-subline " >Just landed to the city. Now, where shall I go?</div>
 
 
                 <div className="grid-description " >
