@@ -59,9 +59,16 @@
   
 
   .main-PropertiesGrid{
-    width: $breakpoint-Samsung-S10;
+    width: 100%;
     
+  }
 
+  .propertiesGrid-parent {
+    @include page-style();
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(15 1fr);
+    gap: 25px;
   }
   
 }
