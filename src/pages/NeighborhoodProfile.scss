@@ -48,10 +48,11 @@
 @media (max-width: $breakpoint-Samsung-S10){
 
   .main-neghborhoodProfile{
-    width: $breakpoint-Samsung-S10;
-        max-width: 450px;
-        width: 450px;
-       overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: unset;
+    align-items: unset;
+
   }
 
   .main-profile-image {
@@ -80,7 +81,16 @@
   }
 
   .history{
-    width: $breakpoint-Samsung-S10;
+    margin-inline: 0px;
+ 
+
+ 
   }
+
+  .kiez-properties-title {
+  color: $burgermeister-green;
+  font-size: 55px;
+  margin-bottom: 70px;
+}
 
 }
