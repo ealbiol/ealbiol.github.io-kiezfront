@@ -8,7 +8,7 @@ import { useContext } from "react";
  * @returns 
  */
 
- import {BASE_URL} from "../config/config";
+import { BASE_URL } from "../config/config";
 
 export default function Login() {
 
@@ -36,14 +36,22 @@ export default function Login() {
             .then((data) => {
                 console.log(data);
                 //alert("Login successful")
-                localStorage.setItem("ACCESS_TOKEN", data.token)    //Creación cookie que contiene el token. El token esta disponible en todo el cliente.
-                if (data.adminToken !== "") {
+                //Creación cookie que contiene el token. El token esta disponible en todo el cliente.
+                if (data.ok == true) {
+                    localStorage.setItem("ACCESS_TOKEN", data.token)
                     localStorage.setItem("ADMIN_TOKEN", data.adminToken)
-                }
-                setLoggedUser(true);
-                localStorage.setItem("USER_NAME", data.userName);
+                    alert("Login successful")
+                    setLoggedUser(true);
+                    localStorage.setItem("USER_NAME", data.userName);
+                    historyCreateOne.push("/")
 
-                historyCreateOne.push("/")
+                } else {
+                    alert(data.message)
+                }
+
+
+
+
             })
     }
 
