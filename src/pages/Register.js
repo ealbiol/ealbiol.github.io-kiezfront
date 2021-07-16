@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import './Register.scss'
 import { useForm } from '../hooks/useForm';
-import {BASE_URL} from "../config/config";
+import { BASE_URL } from "../config/config";
 
 
 export default function Register() {
@@ -39,12 +39,15 @@ export default function Register() {
                     alert("User registered successfully")
                     historyLogin.push("/login")
                 } else {
-                    alert("Email already registered.")
+                    console.log(data)
+                    alert("Registration Error.")
                 }
 
             });
 
     }
+
+
 
     /*
     EXPLICACIÓN FUNCIÓN RegisterClient() Conexión server-client

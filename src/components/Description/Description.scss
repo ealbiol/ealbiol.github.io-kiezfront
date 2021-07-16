@@ -139,7 +139,12 @@ padding-top: 80px;
         font-size: 18px;
         @include font-worksans-regular();
         text-align: justify;
+    }
 
+    &__kiez-description-image{
+        margin-top: 70px;
+        width: 70%;
+        margin-left: 20%;
     }
 
 }
@@ -235,9 +240,13 @@ padding-top: 80px;
             grid-row: 18 / 30;
             color: $burgermeister-green;
             margin-top: 20px;
+
+            
             
         }
     }
+
+ 
 
     .paragraph-box{
 
@@ -252,7 +261,15 @@ padding-top: 80px;
             margin-bottom: 20px;
             @include font-worksans-regular(); 
         }
+
+        &__kiez-description-image{
+            width: 100%;
+            margin-left: 0px;
+        }
+
     }
+
+
 
     .two-images{
         display: flex;
