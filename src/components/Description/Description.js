@@ -27,6 +27,7 @@ export default function Description() {
                     <div className="paragraph-box__text-title" ><b>WHAT DOES "KIEZ" STANDS FOR?</b></div>
                     <div className="paragraph-box__text-content" >Kiez is a German word that refers to a city neighbourhood, a relatively small community within a larger town. The word is mainly used in Berlin and northern Germany. Similar quarters are called Veedel in Cologne and Grätzl in Vienna.</div>
                     <div className="paragraph-box__text-content" >In Berlin the term usually has a positive connotation, as inhabitants often identify with the "Kiez" they live in. A Berliner "Kiez" usually consists mainly of pre-war buildings and upholds its own commercial and cultural infrastructure. Outside Berlin, "Kiez" may be considered by some as somewhat slangy.</div>
+
                     <img className="paragraph-box__kiez-description-image " src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/MoabitStephanstra%C3%9Fe-1.jpg/1280px-MoabitStephanstra%C3%9Fe-1.jpg" alt="Descripcion web" />
                 </div>
 
