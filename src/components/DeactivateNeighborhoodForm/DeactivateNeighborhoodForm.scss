@@ -1,1 +1,18 @@
 @import "../../scss/variables.scss";
+
+.checkbox-and-name{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    margin-left: 700px;
+    font-size: 20px;
+}
+
+.list-to-delete-title{
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.Delete-button{
+    margin-left: 325px;
+}

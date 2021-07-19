@@ -38,7 +38,10 @@ export default function FilteredNeighborhoods() {
           FilteredResultGlobal.map((neighborhood, index) => {
             return <div key={index} >
 
-              <div onClick={(e) => goToNeighborhood(e)} className="sub-main-FilteredNeighborhoods__singleElement" >{neighborhood?.name?.toUpperCase()}</div>
+              <div onClick={(e) => goToNeighborhood(e)} className="sub-main-FilteredNeighborhoods__singleElement" >
+                {neighborhood?.name?.toUpperCase()}
+                {/*  <img src={neighborhood?.photo} width="300px" alt="" />*/}
+              </div>
 
             </div>
           })}

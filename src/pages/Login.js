@@ -37,10 +37,10 @@ export default function Login() {
                 console.log(data);
                 //alert("Login successful")
                 //Creación cookie que contiene el token. El token esta disponible en todo el cliente.
-                if (data.ok == true) {
+                if (data.ok === true) {
                     localStorage.setItem("ACCESS_TOKEN", data.token)
                     localStorage.setItem("ADMIN_TOKEN", data.adminToken)
-                    alert("Login successful")
+                    alert("🥨Login successful!🥨")
                     setLoggedUser(true);
                     localStorage.setItem("USER_NAME", data.userName);
                     historyCreateOne.push("/")

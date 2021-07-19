@@ -45,32 +45,32 @@ export default function CreateNeighborhoodForm() {
             },
             body: JSON.stringify(form)
         };
-        if (form.distrcit == "" ||
-            form.neighborhoodName == "" ||
-            form.architecturePredominance?.name == "" ||
-            form.internationality == "" ||
-            form.partyWinner?.name == "" ||
-            form.transportZone?.name == "" ||
-            form.activityRate?.name == "" ||
-            form.lifeCost?.name == "" ||
-            form.inhabitantsDensity?.name == "" ||
-            form.gymDensity?.name == "" ||
-            form.restaurantsDensity?.name == "" ||
-            form.cinemas?.name == "" ||
-            form.museums?.name == "" ||
-            form.nightLife?.name == "" ||
-            form.airQuality?.name == "" ||
-            form.cleanness?.name == "" ||
-            form.greenAreasDensity?.name == "" ||
-            form.noiseLevel?.name == "" ||
-            form.noiseLevel?.name == "" ||
-            form.safety?.name == "" ||
-            form.privateParkingDensity?.name == "" ||
-            form.photo == "" ||
-            form.lng == "" ||
-            form.lat == "" ||
-            form.citizenAverageAge?.name == "" ||
-            form.superMarketsDensity?.name == ""
+        if (form.distrcit === "" ||
+            form.neighborhoodName === "" ||
+            form.architecturePredominance?.name === "" ||
+            form.internationality === "" ||
+            form.partyWinner?.name === "" ||
+            form.transportZone?.name === "" ||
+            form.activityRate?.name === "" ||
+            form.lifeCost?.name === "" ||
+            form.inhabitantsDensity?.name === "" ||
+            form.gymDensity?.name === "" ||
+            form.restaurantsDensity?.name === "" ||
+            form.cinemas?.name === "" ||
+            form.museums?.name === "" ||
+            form.nightLife?.name === "" ||
+            form.airQuality?.name === "" ||
+            form.cleanness?.name === "" ||
+            form.greenAreasDensity?.name === "" ||
+            form.noiseLevel?.name === "" ||
+            form.noiseLevel?.name === "" ||
+            form.safety?.name === "" ||
+            form.privateParkingDensity?.name === "" ||
+            form.photo === "" ||
+            form.lng === "" ||
+            form.lat === "" ||
+            form.citizenAverageAge?.name === "" ||
+            form.superMarketsDensity?.name === ""
         ) {
 
             alert("Properties Missing")

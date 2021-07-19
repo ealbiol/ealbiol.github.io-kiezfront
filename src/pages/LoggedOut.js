@@ -67,7 +67,7 @@ export default function LoggedOut() {
             {/* IMAGE 2 */}
             <div className="login-main__login-image-right-loggedOut">
 
-                <img width="500px" height="100%" className="login-main__login-image-right__image-right-clip-path" src="https://images.unsplash.com/photo-1527712407711-6e0e8d0f0f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80" alt="" />
+                <img width="500px" height="100%" className="login-main__login-image-right__image-right-clip-path" src="https://images.unsplash.com/photo-1584121100166-472fa95c3b09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="" />
 
             </div>
 

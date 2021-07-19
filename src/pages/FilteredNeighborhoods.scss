@@ -5,7 +5,7 @@
   @include page-style();
   flex-grow: 1;
   color: $burgermeister-green;
-  font-size: 80px;
+  font-size: 100px;
   padding-top: 50px;
 }
 
@@ -21,10 +21,14 @@
     &__singleElement{
       background-color: $burgermeister-white;
       color: $burgermeister-green;
-      font-size: 50px;
-      height: 300px;
+      font-size: 100px;
+      height: 340px;
       border: 2px solid $burgermeister-green;
       @include transition-to-white-bg-green();
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
  
 }

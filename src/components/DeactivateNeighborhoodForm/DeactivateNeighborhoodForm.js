@@ -154,7 +154,7 @@ export default function DeactivateNeighborhoodForm() {
                     NeighborhoodsNameDynamic &&
                     (
                         NeighborhoodsNameDynamic.map((neighborhood, key) => {
-                            if (key <= 20) {
+                            if (key <= 10) {
                                 return (
 
                                     <Form.Check
@@ -163,7 +163,7 @@ export default function DeactivateNeighborhoodForm() {
                                         type="checkbox"
                                         label={neighborhood.name}
                                         id={neighborhood.name}
-
+                                        className="checkbox-and-name"
                                     />
 
 
@@ -172,7 +172,7 @@ export default function DeactivateNeighborhoodForm() {
                         })
                     )
                 }
-                <p>NEIGHBORHOODS TO DELETE:</p>
+                <div className="list-to-delete-title" >NEIGHBORHOODS TO DELETE:</div>
                 {
                     NeighborhoodDelete && (
                         NeighborhoodDelete.map(del => {
@@ -180,8 +180,8 @@ export default function DeactivateNeighborhoodForm() {
                                 <p>{del}</p>
                             )
                         }))}
-                <Button onClick={(e) => (deleteNeighborhood(e))} variant="primary" type="submit" size="lg" block>
-                    Borrar
+                <Button onClick={(e) => (deleteNeighborhood(e))} variant="primary" type="submit" size="lg" block className="Delete-button" >
+                    Delete
                 </Button>
             </Form>
 

@@ -37,3 +37,20 @@
             color: rgb(153, 0, 0);
         }
 }
+
+
+
+@media (max-width: $breakpoint-Samsung-S10){
+
+
+    .main-error-image{
+        max-width: 450px;
+        overflow-x: hidden;
+
+        &__centered{
+            font-size: 80px;
+        }
+    }
+
+
+}
