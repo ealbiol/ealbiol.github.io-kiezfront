@@ -1,7 +1,7 @@
 import "./CreateNeighborhoodForm.scss";
 // import { Form, Input, Button, notification } from "antd";
 // import { LeftCircleOutlined, DollarOutlined } from "@ant-design/icons";
-import { useState, useEffect } from "react";
+import { useState, useEffect, } from "react";
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -20,14 +20,16 @@ import CitizenAverageAgeDropDown from "./Dropdowns/CitizenAverageAgeDropDown";
 import CinemasAndMuseumsDropDown from "./Dropdowns/CinemasAndMuseumsDropDown"
 
 import { useForm } from '../../hooks/useForm';
-import {BASE_URL} from "../../config/config";
+import { BASE_URL } from "../../config/config";
+import { useHistory } from "react-router-dom";
 
 
 
 export default function CreateNeighborhoodForm() {
 
 
-
+    //History Button
+    const historyGoToCreatedNeighborhood = useHistory();
 
     function addNeighborhood(e) {
         const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
@@ -40,18 +42,51 @@ export default function CreateNeighborhoodForm() {
                 "Content-Type": "application/json",
                 "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
             },
-            body: JSON.stringify(form)
+            body: JSON.stringify(form.toLowerCase())
         };
-        fetch(API_NEIGHBORHOODS, params)
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                if (data.ok === true) {
-                    alert("Neighborhood added successfully!")
-                } else {
-                    alert("Properties missing.")
-                }
-            });
+        if (form.distrcit == "" ||
+            form.name == "" ||
+            form.architecturePredominance?.name == "" ||
+            form.internationality == "" ||
+            form.partyWinner?.name == "" ||
+            form.transportZone?.name == "" ||
+            form.activityRate?.name == "" ||
+            form.lifeCost?.name == "" ||
+            form.inhabitantsDensity?.name == "" ||
+            form.gymDensity?.name == "" ||
+            form.restaurantsDensity?.name == "" ||
+            form.cinemas?.name == "" ||
+            form.museums?.name == "" ||
+            form.nightLife?.name == "" ||
+            form.airQuality?.name == "" ||
+            form.cleanness?.name == "" ||
+            form.greenAreasDensity?.name == "" ||
+            form.noiseLevel?.name == "" ||
+            form.noiseLevel?.name == "" ||
+            form.safety?.name == "" ||
+            form.privateParkingDensity?.name == "" ||
+            form.photo == "" ||
+            form.lng == "" ||
+            form.lat == "" ||
+            form.citizenAverageAge?.name == "" ||
+            form.superMarketsDensity?.name == ""
+        ) {
+
+            alert("Properties Missing")
+        } else {
+            fetch(API_NEIGHBORHOODS, params)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    if (data.ok === true) {
+                        alert("Neighborhood added successfully!")
+                        historyGoToCreatedNeighborhood.push(`/neighborhoodprofile/${form.name}`)
+                    } else {
+                        alert("Properties missing.")
+                    }
+                });
+        }
+
     }
 
 

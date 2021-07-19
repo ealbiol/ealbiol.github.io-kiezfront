@@ -7,7 +7,7 @@ export default function Error() {
 
             <div className="main-error-image " >
                 <div className="main-error-image__centered" >WELCOME TO KIEZ HAMBURG!</div>
-                <img width="900px" src="https://images.unsplash.com/photo-1617222297105-67d47684eba7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="" />
+                <img width="1250px" src="https://images.unsplash.com/photo-1617222297105-67d47684eba7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="" />
             </div>
 
             <div className="main-subtext " >
