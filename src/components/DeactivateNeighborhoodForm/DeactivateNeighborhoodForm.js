@@ -4,17 +4,9 @@ import { useState, useEffect } from "react";
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
 
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-
 import Button from "react-bootstrap/Button";
-
 import Form from 'react-bootstrap/Form'
-
 import { useForm } from '../../hooks/useForm';
-
-import NeighborhoodsDropDown from "./DropDowns/NeighborhoodsDropDown"
-
 import { BASE_URL } from "../../config/config";
 
 
@@ -134,58 +126,6 @@ export default function DeactivateNeighborhoodForm() {
         <div className="main-DeactivateNeighborhoodForm" >
 
             <Form onSubmit={(e) => deleteNeighborhood(e)} >
-                {/*
-                {NeighborhoodsName &&
-                    (
-
-                        <div>
-                            <Form.Group controlId="InputArchitecture">
-                                <div className="form-input " >
-                                    <div >
-                                        <Form.Label >
-
-                                            Neighborhoods:
-
-                                        </Form.Label>
-                                    </div>
-
-                                  <div  >
-                                        <Dropdown>
-
-                                            <DropdownButton
-                                                className="create-button-input"
-                                                size="lg"
-                                                variant="success"
-                                                title={form.neighborhoodName ? form.neighborhoodName : "Neighborhood Name"}
-                                                onSelect={(e) => handleInputChange({ target: { name: "neighborhoodName", value: e } })}
-                                                value={form.neighborhoodName}
-                                                name="neighborhoodName"
-                                            >
-
-                                                {NeighborhoodsName &&
-                                                    (
-                                                        <div className="districts-menu" >
-
-                                                            <NeighborhoodsDropDown
-                                                                NeighborhoodsName={NeighborhoodsName}
-                                                            />
-                                                        </div>
-
-                                                    )}
-                                            </DropdownButton>
-
-                                        </Dropdown>
-                                    </div>
-                                                   
-                                </div>
-
-                            </Form.Group>
-
-                        </div>
-
-                    )}
-                                                */}
-
 
                 <Form.Group controlId="InputName">
                     <div className="form-input" >

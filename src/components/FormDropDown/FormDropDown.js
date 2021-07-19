@@ -1,4 +1,5 @@
-import "./CreateNeighborhoodForm.scss";
+import "./FormDropDown.scss"
+
 import { useState, useEffect, } from "react";
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
@@ -8,22 +9,20 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-import ArchitectureDropdown from "./Dropdowns/ArchitectureDropdown";
-import PartyWinnerDropdown from "./Dropdowns/PartyWinnerDropDown";
-import Modal from "./Modals/Modal"
-import TransportZoneDropdown from "./Dropdowns/TransportZoneDropDown"
-import LowHighDropDown from "./Dropdowns/LowHighDropDown";
-import LifeCostDropDown from "./Dropdowns/LifeCostDropDown";
-import CitizenAverageAgeDropDown from "./Dropdowns/CitizenAverageAgeDropDown";
-import CinemasAndMuseumsDropDown from "./Dropdowns/CinemasAndMuseumsDropDown"
+import ArchitectureDropdown from "../CreateNeighborhoodForm/Dropdowns/ArchitectureDropdown";
+import PartyWinnerDropdown from "../CreateNeighborhoodForm/Dropdowns/PartyWinnerDropDown";
+import Modal from "../CreateNeighborhoodForm/Modals/Modal"
+import TransportZoneDropdown from "../CreateNeighborhoodForm/Dropdowns/TransportZoneDropDown"
+import LowHighDropDown from "../CreateNeighborhoodForm/Dropdowns/LowHighDropDown";
+import LifeCostDropDown from "../CreateNeighborhoodForm/Dropdowns/LifeCostDropDown";
+import CitizenAverageAgeDropDown from "../CreateNeighborhoodForm/Dropdowns/CitizenAverageAgeDropDown";
+import CinemasAndMuseumsDropDown from "../CreateNeighborhoodForm/Dropdowns/CinemasAndMuseumsDropDown"
 
 import { useForm } from '../../hooks/useForm';
 import { BASE_URL } from "../../config/config";
 import { useHistory } from "react-router-dom";
 
-
-
-export default function CreateNeighborhoodForm() {
+export default function FormDropDown({ neighborhoodUpdate }) {
 
 
     //History Button
@@ -100,7 +99,12 @@ export default function CreateNeighborhoodForm() {
 
     const { setLoggedUser } = useContext(GlobalContext);
 
-
+    useEffect(() => {
+        // Inicializando la const token
+        //setForm
+        console.log(neighborhoodUpdate)
+        setInitialFormState(neighborhoodUpdate)
+    }, [neighborhoodUpdate]);
     // FETCH NEIGHBORHOOD PROPERTIES
     useEffect(() => {
         // Inicializando la const token
@@ -148,7 +152,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-    const initialFormState = {
+    const [initialFormState, setInitialFormState] = useState({
         neighborhoodDistrict: "",
         neighborhoodName: "",
         neighborhoodArchitecture: "",
@@ -174,7 +178,7 @@ export default function CreateNeighborhoodForm() {
         neighborhoodLat: "",
         neighborhoodsuperMarketsDensity: "",
         neighborhoodNightLife: ""
-    };
+    });
 
 
     //useState Form
@@ -183,7 +187,6 @@ export default function CreateNeighborhoodForm() {
 
 
     return (
-
         <div className="main-form"  >
 
 
@@ -1180,20 +1183,20 @@ export default function CreateNeighborhoodForm() {
 
                             {/* TOOLTIP */}
                             {/* <>
-                                {['top', 'right', 'bottom', 'left'].map((placement) => (
-                                    <OverlayTrigger
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Tooltip id={`tooltip-${neighborhoodProperties?.name}`}>
-                                                Tooltip on <strong>{neighborhoodProperties?.name}</strong>.
-                                            </Tooltip>
-                                        }
-                                    >
-                                        <Button variant="secondary">Tooltip on {placement}</Button>
-                                    </OverlayTrigger>
-                                ))}
-                            </> */}
+                            {['top', 'right', 'bottom', 'left'].map((placement) => (
+                                <OverlayTrigger
+                                    key={placement}
+                                    placement={placement}
+                                    overlay={
+                                        <Tooltip id={`tooltip-${neighborhoodProperties?.name}`}>
+                                            Tooltip on <strong>{neighborhoodProperties?.name}</strong>.
+                                        </Tooltip>
+                                    }
+                                >
+                                    <Button variant="secondary">Tooltip on {placement}</Button>
+                                </OverlayTrigger>
+                            ))}
+                        </> */}
 
 
 
@@ -1210,11 +1213,5 @@ export default function CreateNeighborhoodForm() {
             }
 
         </div >
-
     )
 }
-
-
-
-
-
