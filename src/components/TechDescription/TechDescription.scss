@@ -4,7 +4,38 @@
 .TechDescription-in-Technologies{
     @include page-style();
     height: 500vh;
-    font-size: 80px;
+    font-size: 130px;
     color: $burgermeister-green;
+    padding-left: 40px;
+    padding-right: 70px;
 
+
+    &__heroku-description-main{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        font-size: 80px;
+        margin-top: 130px;
+
+        &__heroku-explanation{
+            font-size: 30px;
+            text-align: justify;
+
+        }
+
+        &__front-link{
+            cursor: pointer;
+            margin-top: 50px;
+            font-size: 50px;
+        }
+
+      
+    }
+
+}
+
+.Heroku-left{
+    padding-left: 20px;
+    padding-right: 20px; 
+    font-size: 150px;
 }

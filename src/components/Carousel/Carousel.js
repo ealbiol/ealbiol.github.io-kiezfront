@@ -31,7 +31,6 @@ export default function Carousel() {
   const historyRandomNg = useHistory();
 
   function handleRandomNeighborhood(e) {
-    //console.log(e.target.textContent);
     historyRandomNg.push(`/neighborhoodprofile/${e.target.textContent}`);
   }
 
