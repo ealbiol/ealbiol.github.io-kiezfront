@@ -29,15 +29,15 @@ export default function FormDropDown({ neighborhoodUpdate }) {
     const historyGoToCreatedNeighborhood = useHistory();
 
 
-    function addNeighborhood(e) {
-        const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
+    function updateNeighborhood(e) {
+        const API_NEIGHBORHOODS = `${BASE_URL}update-neighborhood/${neighborhoodUpdate._id}`;
         const token = localStorage.getItem("ADMIN_TOKEN")
         let name = form.neighborhoodName;
         console.log("NOMBRE", form.neighborhoodName)
         e.preventDefault()
         console.log("FORM", form);
         const params = {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
@@ -102,8 +102,67 @@ export default function FormDropDown({ neighborhoodUpdate }) {
     useEffect(() => {
         // Inicializando la const token
         //setForm
-        console.log(neighborhoodUpdate)
-        setInitialFormState(neighborhoodUpdate)
+        console.log("ESTAMOS EN EL FECTCH DE UPDATE", neighborhoodUpdate?.result)
+        setForm({
+            ...form,
+
+            neighborhoodDistrict: neighborhoodUpdate?.result?.district.name,
+            neighborhoodName: neighborhoodUpdate?.result?.name,
+            neighborhoodArchitecture: neighborhoodUpdate?.result?.architecturePredominance.name,
+            neighborhoodInternationality: neighborhoodUpdate?.result?.internationality,
+            neighborhoodPartyWinner: neighborhoodUpdate?.result?.partyWinner.name,
+            neighborhoodTransportZone: neighborhoodUpdate?.result?.transportZone.name,
+            neighborhoodActivityRate: neighborhoodUpdate?.result?.activityRate.name,
+            neighborhoodLifeCost: neighborhoodUpdate?.result?.lifeCost.name,
+            neighborhoodInhabitantsDensity: neighborhoodUpdate?.result?.inhabitantsDensity,
+            neighborhoodCitizenAverageAge: neighborhoodUpdate?.result?.citizenAverageAge,
+            neighborhoodGymDensity: neighborhoodUpdate?.result?.gymDensity,
+            neighborhoodRestaurantsDensity: neighborhoodUpdate?.result?.restaurantsDensity?.name,
+            neighborhoodCinemas: neighborhoodUpdate?.result?.cinemas?.name,
+            neighborhoodMuseums: neighborhoodUpdate?.result?.museums?.name,
+            neighborhoodAirQuality: neighborhoodUpdate?.result?.airQuality,
+            neighborhoodCleanness: neighborhoodUpdate?.result?.cleanness.name,
+            neighborhoodGreenAreasDensity: neighborhoodUpdate?.result?.greenAreasDensity,
+            neighborhoodNoiseLevel: neighborhoodUpdate?.result?.noiseLevel?.name,
+            neighborhoodSafety: neighborhoodUpdate?.result?.safety,
+            neighborhoodPrivateParkingDensity: neighborhoodUpdate?.result?.privateParkingDensity,
+            neighborhoodPhoto: neighborhoodUpdate?.result?.photo,
+            neighborhoodLng: neighborhoodUpdate?.result?.lng,
+            neighborhoodLat: neighborhoodUpdate?.result?.lat,
+            neighborhoodsuperMarketsDensity: neighborhoodUpdate?.result?.supermarketsDensity.name,
+            neighborhoodNightLife: neighborhoodUpdate?.result?.nightLife.name
+
+
+
+        })
+        /*
+        setInitialFormState({
+            neighborhoodDistrict: neighborhoodUpdate?.result?.district.name,
+            neighborhoodName: neighborhoodUpdate?.result?.name,
+            neighborhoodArchitecture: neighborhoodUpdate?.result?.architecturePredominance.name,
+            neighborhoodInternationality: neighborhoodUpdate?.result?.internationality,
+            neighborhoodPartyWinner: neighborhoodUpdate?.result?.partyWinner.name,
+            neighborhoodTransportZone: neighborhoodUpdate?.result?.transportZone.name,
+            neighborhoodActivityRate: neighborhoodUpdate?.result?.activityRate.name,
+            neighborhoodLifeCost: neighborhoodUpdate?.result?.lifeCost.name,
+            neighborhoodInhabitantsDensity: neighborhoodUpdate?.result?.inhabitantsDensity,
+            neighborhoodCitizenAverageAge: neighborhoodUpdate?.result?.citizenAverageAge,
+            neighborhoodGymDensity: neighborhoodUpdate?.result?.gymDensity,
+            neighborhoodRestaurantsDensity: neighborhoodUpdate?.result?.restaurantsDensity,
+            neighborhoodCinemas: neighborhoodUpdate?.result?.cinemas,
+            neighborhoodMuseums: neighborhoodUpdate?.result?.museums,
+            neighborhoodAirQuality: neighborhoodUpdate?.result?.airQuality,
+            neighborhoodCleanness: neighborhoodUpdate?.result?.cleanness.name,
+            neighborhoodGreenAreasDensity: neighborhoodUpdate?.result?.greenAreasDensity,
+            neighborhoodNoiseLevel: neighborhoodUpdate?.result?.noiseLevel,
+            neighborhoodSafety: neighborhoodUpdate?.result?.safety,
+            neighborhoodPrivateParkingDensity: neighborhoodUpdate?.result?.privateParkingDensity,
+            neighborhoodPhoto: neighborhoodUpdate?.result?.photo,
+            neighborhoodLng: neighborhoodUpdate?.result?.lng,
+            neighborhoodLat: neighborhoodUpdate?.result?.lat,
+            neighborhoodsuperMarketsDensity: neighborhoodUpdate?.result?.supermarketsDensity.name,
+            neighborhoodNightLife: neighborhoodUpdate?.result?.nightLife.name
+        })*/
     }, [neighborhoodUpdate]);
     // FETCH NEIGHBORHOOD PROPERTIES
     useEffect(() => {
@@ -182,19 +241,18 @@ export default function FormDropDown({ neighborhoodUpdate }) {
 
 
     //useState Form
-    const [form, handleInputChange] = useForm(initialFormState);
+    const [form, handleInputChange, setForm] = useForm(initialFormState);
 
 
 
     return (
         <div className="main-form"  >
 
-
             {neighborhoodProperties &&
                 (
                     <div  >
 
-                        <Form onSubmit={(e) => addNeighborhood(e)} >
+                        <Form onSubmit={(e) => updateNeighborhood(e)} >
 
                             {/* __________________1/20 NEIGHBORHOOD DISTRICT__________________ */}
 

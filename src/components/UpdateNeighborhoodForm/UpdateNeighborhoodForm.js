@@ -32,66 +32,67 @@ export default function UpdateNeighborhoodForm() {
     //History Button
     const historyGoToCreatedNeighborhood = useHistory();
 
-
-    function addNeighborhood(e) {
-        const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
-        const token = localStorage.getItem("ADMIN_TOKEN")
-        let name = form.neighborhoodName;
-        console.log("NOMBRE", form.neighborhoodName)
-        e.preventDefault()
-        console.log("FORM", form);
-        const params = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
-            },
-            body: JSON.stringify(form)
-        };
-        if (form.distrcit === "" ||
-            form.neighborhoodName === "" ||
-            form.architecturePredominance?.name === "" ||
-            form.internationality === "" ||
-            form.partyWinner?.name === "" ||
-            form.transportZone?.name === "" ||
-            form.activityRate?.name === "" ||
-            form.lifeCost?.name === "" ||
-            form.inhabitantsDensity?.name === "" ||
-            form.gymDensity?.name === "" ||
-            form.restaurantsDensity?.name === "" ||
-            form.cinemas?.name === "" ||
-            form.museums?.name === "" ||
-            form.nightLife?.name === "" ||
-            form.airQuality?.name === "" ||
-            form.cleanness?.name === "" ||
-            form.greenAreasDensity?.name === "" ||
-            form.noiseLevel?.name === "" ||
-            form.noiseLevel?.name === "" ||
-            form.safety?.name === "" ||
-            form.privateParkingDensity?.name === "" ||
-            form.photo === "" ||
-            form.lng === "" ||
-            form.lat === "" ||
-            form.citizenAverageAge?.name === "" ||
-            form.superMarketsDensity?.name === ""
-        ) {
-
-            alert("Properties Missing")
-        } else {
-            fetch(API_NEIGHBORHOODS, params)
-                .then((response) => response.json())
-                .then((data) => {
-                    if (data.ok === true) {
-                        alert("Neighborhood added successfully!")
-
-                        historyGoToCreatedNeighborhood.push(`/neighborhoodprofile/${name}`)
-                    } else {
-                        alert("Properties missing.")
-                    }
-                });
-        }
-
-    }
+    /*
+       function addNeighborhood(e) {
+           const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
+           const token = localStorage.getItem("ADMIN_TOKEN")
+           let name = form.neighborhoodName;
+           console.log("NOMBRE", form.neighborhoodName)
+           e.preventDefault()
+           console.log("FORM", form);
+           const params = {
+               method: "POST",
+               headers: {
+                   "Content-Type": "application/json",
+                   "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+               },
+               body: JSON.stringify(form)
+           };
+          
+           if (form.distrcit === "" ||
+               form.neighborhoodName === "" ||
+               form.architecturePredominance?.name === "" ||
+               form.internationality === "" ||
+               form.partyWinner?.name === "" ||
+               form.transportZone?.name === "" ||
+               form.activityRate?.name === "" ||
+               form.lifeCost?.name === "" ||
+               form.inhabitantsDensity?.name === "" ||
+               form.gymDensity?.name === "" ||
+               form.restaurantsDensity?.name === "" ||
+               form.cinemas?.name === "" ||
+               form.museums?.name === "" ||
+               form.nightLife?.name === "" ||
+               form.airQuality?.name === "" ||
+               form.cleanness?.name === "" ||
+               form.greenAreasDensity?.name === "" ||
+               form.noiseLevel?.name === "" ||
+               form.noiseLevel?.name === "" ||
+               form.safety?.name === "" ||
+               form.privateParkingDensity?.name === "" ||
+               form.photo === "" ||
+               form.lng === "" ||
+               form.lat === "" ||
+               form.citizenAverageAge?.name === "" ||
+               form.superMarketsDensity?.name === ""
+           ) {
+   
+               alert("Properties Missing")
+           } else {
+               fetch(API_NEIGHBORHOODS, params)
+                   .then((response) => response.json())
+                   .then((data) => {
+                       if (data.ok === true) {
+                           alert("Neighborhood added successfully!")
+   
+                           historyGoToCreatedNeighborhood.push(`/neighborhoodprofile/${name}`)
+                       } else {
+                           alert("Properties missing.")
+                       }
+                   });
+           }
+   
+       }*/
 
 
 
@@ -167,44 +168,45 @@ export default function UpdateNeighborhoodForm() {
     }, [setLoggedUser]);
 
     const [neighborhoodUpdate, setNeighborhoodUpdate] = useState("")
+    const [searchUpdate, setSearchUpdate] = useState("")
 
-
-
-    const initialFormState = {
-        neighborhoodDistrict: "",
-        neighborhoodName: "",
-        neighborhoodArchitecture: "",
-        neighborhoodInternationality: "",
-        neighborhoodPartyWinner: "",
-        neighborhoodTransportZone: "",
-        neighborhoodActivityRate: "",
-        neighborhoodLifeCost: "",
-        neighborhoodInhabitantsDensity: "",
-        neighborhoodCitizenAverageAge: "",
-        neighborhoodGymDensity: "",
-        neighborhoodRestaurantsDensity: "",
-        neighborhoodCinemas: "",
-        neighborhoodMuseums: "",
-        neighborhoodAirQuality: "",
-        neighborhoodCleanness: "",
-        neighborhoodGreenAreasDensity: "",
-        neighborhoodNoiseLevel: "",
-        neighborhoodSafety: "",
-        neighborhoodPrivateParkingDensity: "",
-        neighborhoodPhoto: "",
-        neighborhoodLng: "",
-        neighborhoodLat: "",
-        neighborhoodsuperMarketsDensity: "",
-        neighborhoodNightLife: ""
-    };
-
+    /*
+        const  [initialFormState, setInitialFormState] = useState(initialState) = {
+            neighborhoodDistrict: "",
+            neighborhoodName: "",
+            neighborhoodArchitecture: "",
+            neighborhoodInternationality: "",
+            neighborhoodPartyWinner: "",
+            neighborhoodTransportZone: "",
+            neighborhoodActivityRate: "",
+            neighborhoodLifeCost: "",
+            neighborhoodInhabitantsDensity: "",
+            neighborhoodCitizenAverageAge: "",
+            neighborhoodGymDensity: "",
+            neighborhoodRestaurantsDensity: "",
+            neighborhoodCinemas: "",
+            neighborhoodMuseums: "",
+            neighborhoodAirQuality: "",
+            neighborhoodCleanness: "",
+            neighborhoodGreenAreasDensity: "",
+            neighborhoodNoiseLevel: "",
+            neighborhoodSafety: "",
+            neighborhoodPrivateParkingDensity: "",
+            neighborhoodPhoto: "",
+            neighborhoodLng: "",
+            neighborhoodLat: "",
+            neighborhoodsuperMarketsDensity: "",
+            neighborhoodNightLife: ""
+        };
+    */
 
     //useState Form
-    const [form, handleInputChange] = useForm(initialFormState);
+    //    const [form, handleInputChange] = useForm(initialFormState);
 
 
     function handleInputChangeRecord(e) {
-        handleInputChange(e)
+        //handleInputChange(e)
+        setSearchUpdate(e.target.value)
         setNeighborhoodsNameDynamic(NeighborhoodsName.filter((neighborhood) => {
             return neighborhood.name
                 .toLowerCase()
@@ -258,9 +260,10 @@ export default function UpdateNeighborhoodForm() {
             .then((response) => response.json())
             .then((data) => {
                 setNeighborhoodUpdate(data);
+
+                console.log(data);
             });
 
-        console.log(e.target.id);
     }
 
 
@@ -290,7 +293,7 @@ export default function UpdateNeighborhoodForm() {
                                 <Form.Control
 
                                     onChange={(e) => handleInputChangeRecord(e)}
-                                    value={form.neighborhoodName}
+                                    value={searchUpdate}
                                     name="neighborhoodName"
                                     className="create-button-input"
                                     type="text"
