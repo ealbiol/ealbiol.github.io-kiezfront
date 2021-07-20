@@ -30,7 +30,8 @@ export default function FormDropDown({ neighborhoodUpdate }) {
 
 
     function updateNeighborhood(e) {
-        const API_NEIGHBORHOODS = `${BASE_URL}update-neighborhood/${neighborhoodUpdate._id}`;
+        console.log("RESULTADO AL UPDATEAR", neighborhoodUpdate.result)
+        const API_NEIGHBORHOODS = `${BASE_URL}adminUsers/update-neighborhood/${neighborhoodUpdate.result._id}`;
         const token = localStorage.getItem("ADMIN_TOKEN")
         let name = form.neighborhoodName;
         console.log("NOMBRE", form.neighborhoodName)
