@@ -307,7 +307,7 @@ export default function UpdateNeighborhoodForm() {
                         NeighborhoodsNameDynamic &&
                         (
                             NeighborhoodsNameDynamic.map((neighborhood, key) => {
-                                if (key <= 20) {
+                                if (key <= 10) {
                                     return (
 
                                         <Button
@@ -315,7 +315,7 @@ export default function UpdateNeighborhoodForm() {
                                             onClick={e => selectElement(e)}
                                             variant="primary"
                                             type="button"
-
+                                            className="button-Neighborhood-name-update"
                                             id={neighborhood.name}
 
                                         >{neighborhood.name}</Button>
@@ -326,8 +326,10 @@ export default function UpdateNeighborhoodForm() {
                             })
                         )
                     }
-                    <p>NEIGHBORHOODS TO DELETE:</p>
-                    {
+
+
+                    {/* <p>NEIGHBORHOODS TO DELETE:</p> */}
+                    {/* {
                         NeighborhoodDelete && (
                             NeighborhoodDelete.map(del => {
                                 return (
@@ -336,7 +338,9 @@ export default function UpdateNeighborhoodForm() {
                             }))}
                     <Button onClick={(e) => (deleteNeighborhood(e))} variant="primary" type="submit" size="lg" block>
                         Borrar
-                    </Button>
+                    </Button> */}
+
+
                 </Form>
 
             </div>
