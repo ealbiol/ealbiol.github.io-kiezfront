@@ -66,9 +66,9 @@ export default function CustomizedSlider(props) {
     // Test
 
     if (e.target.innerText !== "") {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText)
       const text = valueText(parseInt(e.target.innerText))
-      console.log("TEXT ", text);
+      //console.log("TEXT ", text);
       switch (index) {
 
         case 0:

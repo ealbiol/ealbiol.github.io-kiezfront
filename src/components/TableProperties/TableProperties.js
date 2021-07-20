@@ -5,7 +5,7 @@ export default function TableProperties(props) {
     const NProperties = [
 
 
-      
+
         { name: "District" },
         { name: "Architecture Predominance" },
         { name: "Internationality" },
@@ -32,30 +32,32 @@ export default function TableProperties(props) {
         { name: "S-Bahn Lines" },
         { name: "Parking Street Slots" },
 
-       
-        
+
+
     ]
 
 
     return (
-        <thead >
-            <tr  >
-                <th></th>
-                {
 
-                    
+        <tr  >
+            <th></th>
 
-                        NProperties.map((property, index) => {
-                            <tr></tr>
-                            return (
+            {
 
-                                <th key={index}  className="main-TableCompare__fulltable__propertiesBar__propertyName " >{property.name.toUpperCase()} </th>
-                            )
-                        })
 
-                    
-                }
-            </tr>
-        </thead>
+
+                NProperties.map((property, index) => {
+
+                    return (
+                        // <tr></tr> IRIA FUERA DEL RETURN
+
+                        <th key={index} className="main-TableCompare__fulltable__propertiesBar__propertyName " >{property.name.toUpperCase()} </th>
+                    )
+                })
+
+
+            }
+        </tr>
+
     )
 }

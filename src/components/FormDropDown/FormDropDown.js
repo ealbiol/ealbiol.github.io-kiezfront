@@ -24,6 +24,42 @@ import { useHistory } from "react-router-dom";
 
 export default function FormDropDown({ neighborhoodUpdate }) {
 
+    const [neighborhoodProperties, setNeighborhoodProperties] = useState({});
+
+    const [DistrictName, setDistrictName] = useState([])
+
+    const { setLoggedUser } = useContext(GlobalContext);
+
+    const [initialFormState] = useState({
+        neighborhoodDistrict: "",
+        neighborhoodName: "",
+        neighborhoodArchitecture: "",
+        neighborhoodInternationality: "",
+        neighborhoodPartyWinner: "",
+        neighborhoodTransportZone: "",
+        neighborhoodActivityRate: "",
+        neighborhoodLifeCost: "",
+        neighborhoodInhabitantsDensity: "",
+        neighborhoodCitizenAverageAge: "",
+        neighborhoodGymDensity: "",
+        neighborhoodRestaurantsDensity: "",
+        neighborhoodCinemas: "",
+        neighborhoodMuseums: "",
+        neighborhoodAirQuality: "",
+        neighborhoodCleanness: "",
+        neighborhoodGreenAreasDensity: "",
+        neighborhoodNoiseLevel: "",
+        neighborhoodSafety: "",
+        neighborhoodPrivateParkingDensity: "",
+        neighborhoodPhoto: "",
+        neighborhoodLng: "",
+        neighborhoodLat: "",
+        neighborhoodsuperMarketsDensity: "",
+        neighborhoodNightLife: ""
+    });
+
+
+    const [form, handleInputChange, setForm] = useForm(initialFormState);
 
     //History Button
     const historyGoToCreatedNeighborhood = useHistory();
@@ -94,11 +130,6 @@ export default function FormDropDown({ neighborhoodUpdate }) {
 
 
 
-    const [neighborhoodProperties, setNeighborhoodProperties] = useState({});
-
-    const [DistrictName, setDistrictName] = useState([])
-
-    const { setLoggedUser } = useContext(GlobalContext);
 
     useEffect(() => {
         // Inicializando la const token
@@ -212,38 +243,8 @@ export default function FormDropDown({ neighborhoodUpdate }) {
 
 
 
-    const [initialFormState, setInitialFormState] = useState({
-        neighborhoodDistrict: "",
-        neighborhoodName: "",
-        neighborhoodArchitecture: "",
-        neighborhoodInternationality: "",
-        neighborhoodPartyWinner: "",
-        neighborhoodTransportZone: "",
-        neighborhoodActivityRate: "",
-        neighborhoodLifeCost: "",
-        neighborhoodInhabitantsDensity: "",
-        neighborhoodCitizenAverageAge: "",
-        neighborhoodGymDensity: "",
-        neighborhoodRestaurantsDensity: "",
-        neighborhoodCinemas: "",
-        neighborhoodMuseums: "",
-        neighborhoodAirQuality: "",
-        neighborhoodCleanness: "",
-        neighborhoodGreenAreasDensity: "",
-        neighborhoodNoiseLevel: "",
-        neighborhoodSafety: "",
-        neighborhoodPrivateParkingDensity: "",
-        neighborhoodPhoto: "",
-        neighborhoodLng: "",
-        neighborhoodLat: "",
-        neighborhoodsuperMarketsDensity: "",
-        neighborhoodNightLife: ""
-    });
-
 
     //useState Form
-    const [form, handleInputChange, setForm] = useForm(initialFormState);
-
 
 
     return (

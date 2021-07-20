@@ -4,8 +4,8 @@ import { GlobalContext } from "../Router";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import checkIfLogged from "../Functions/Functions"
-import {BASE_URL} from "../config/config";
-
+import { BASE_URL } from "../config/config";
+import TechDescription from "../components/TechDescription/TechDescription";
 
 export default function Technologies() {
 
@@ -38,26 +38,30 @@ export default function Technologies() {
 
     return (
 
-        <div className="propertiesGrid-parent " >
-            {
-                Technologies.map((technology, index) => {
-                    return (
-                        <div className="propertiesGrid-parent__proertiesGrid-child"  >
+        <div className="propertiesGrid-grandparent" >
+            <div className="propertiesGrid-parent " >
+                {
+                    Technologies.map((technology, index) => {
+                        return (
+                            <div className="propertiesGrid-parent__proertiesGrid-child"  >
 
-                            <TechnologyElement
-                                propertyName={technology?.name}
-                                subPropertyName={technology?.tool}
-                                src={technology.image}
-                                link={technology.link}
-                                key={index}
-                            />
+                                <TechnologyElement
+                                    propertyName={technology?.name}
+                                    subPropertyName={technology?.tool}
+                                    src={technology.image}
+                                    link={technology.link}
+                                    key={index}
+                                />
 
-                        </div>
-                    )
-                })
-            }
+                            </div>
+                        )
+                    })
+                }
+
+            </div>
+
+            <TechDescription />
         </div>
-
     )
 }
 

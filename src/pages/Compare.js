@@ -4,7 +4,7 @@ import "./Compare.scss"
 import { useState } from 'react';
 import checkIfLogged from "../Functions/Functions"
 import { GlobalContext } from "../Router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 export default function Compare() {
@@ -15,7 +15,9 @@ export default function Compare() {
     const historyNoToken = useHistory();
 
     //Called Function from Functions.js
-    checkIfLogged(setLoggedUser, historyNoToken)
+    useEffect(() => {
+        checkIfLogged(setLoggedUser, historyNoToken)
+    }, [setLoggedUser, historyNoToken])
 
 
     function compareActive() {

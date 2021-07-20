@@ -524,10 +524,10 @@ export default function FindYourKiez() {
         return res.json();
       })
       .then((response) => {
+        console.log("Filtered Neighborhoods:", response.neighborhoods)
         setFilteredResult(response.neighborhoods);
       })
       .catch((err) => {
-        console.log(err);
       });
   }, [setLoggedUser, JSONFilter])
 

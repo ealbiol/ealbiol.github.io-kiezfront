@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
-import {BASE_URL} from "../../config/config";
+import { BASE_URL } from "../../config/config";
 
 
 export default function TableCompare(props) {
@@ -106,46 +106,49 @@ export default function TableCompare(props) {
 
             <table>
               {/* THEAD */}
-              {props.useHeader && <TableProperties />}
-
+              <thead >
+                {props.useHeader && <TableProperties />}
+              </thead>
               {/* TBODY */}
-              {neighborhoodsDynamic && (
-                <tbody className="main-TableCompare__fulltable__tbody ">
+              <tbody className="main-TableCompare__fulltable__tbody ">
+                {neighborhoodsDynamic && (
+                  <>
+                    {neighborhoodsDynamic.map((neighborhood, index) => {
+                      return (
+                        <tr key={index}>
+                          <th onClick={(e) => goToProfile(e)} >{neighborhood?.name.toUpperCase()}</th>
+                          <td>{neighborhood?.district?.name}</td>
+                          <td>{neighborhood?.architecturePredominance?.name}</td>
+                          <td>{neighborhood?.internationality}%</td>
+                          <td style={{ backgroundColor: neighborhood.partyWinner.color }}>{neighborhood?.partyWinner.name.toUpperCase()}</td>
+                          <td>{neighborhood?.transportZone?.name}</td>
+                          <td>{neighborhood?.activityRate?.name}</td>
+                          <td>{neighborhood?.lifeCost?.name}</td>
+                          <td>{neighborhood?.inhabitantsDensity}</td>
+                          <td>{neighborhood?.citizenAverageAge}</td>
+                          <td>{neighborhood?.gymDensity}</td>
+                          <td>{neighborhood?.restaurantsDensity?.name}</td>
+                          <td>{neighborhood?.supermarketsDensity?.name}</td>
+                          <td>{neighborhood?.cinemas?.name}</td>
+                          <td>{neighborhood?.museums?.name}</td>
+                          <td>{neighborhood?.nightLife?.name}</td>
+                          <td>{neighborhood?.airQuality}</td>
+                          <td>{neighborhood?.cleanness?.name}</td>
+                          <td>{neighborhood?.greenAreasDensity}</td>
+                          <td>{neighborhood?.noiseLevel?.name}</td>
+                          <td>{neighborhood?.safety}</td>
+                          <td>{neighborhood?.privateParkingDensity}</td>
+                          <td>{neighborhood?.busLines}</td>
+                          <td>{neighborhood?.ubahnLines?.name}</td>
+                          <td>{neighborhood?.sbahnLines?.name}</td>
+                          <td>{neighborhood?.parkingStreetSlots}</td>
+                        </tr>
+                      );
+                    })}
+                  </>
 
-                  {neighborhoodsDynamic.map((neighborhood, index) => {
-                    return (
-                      <tr key={index}>
-                        <th onClick={(e) => goToProfile(e)} >{neighborhood.name.toUpperCase()}</th>
-                        <td>{neighborhood.district?.name}</td>
-                        <td>{neighborhood.architecturePredominance?.name}</td>
-                        <td>{neighborhood.internationality}%</td>
-                        <td style={{ backgroundColor: neighborhood.partyWinner.color, }}>{neighborhood.partyWinner.name.toUpperCase()}</td>
-                        <td>{neighborhood.transportZone?.name}</td>
-                        <td>{neighborhood.activityRate?.name}</td>
-                        <td>{neighborhood.lifeCost?.name}</td>
-                        <td>{neighborhood.inhabitantsDensity}</td>
-                        <td>{neighborhood.citizenAverageAge}</td>
-                        <td>{neighborhood.gymDensity}</td>
-                        <td>{neighborhood.restaurantsDensity?.name}</td>
-                        <td>{neighborhood.supermarketsDensity?.name}</td>
-                        <td>{neighborhood.cinemas?.name}</td>
-                        <td>{neighborhood.museums?.name}</td>
-                        <td>{neighborhood.nightLife?.name}</td>
-                        <td>{neighborhood.airQuality}</td>
-                        <td>{neighborhood.cleanness?.name}</td>
-                        <td>{neighborhood.greenAreasDensity}</td>
-                        <td>{neighborhood.noiseLevel?.name}</td>
-                        <td>{neighborhood.safety}</td>
-                        <td>{neighborhood.privateParkingDensity}</td>
-                        <td>{neighborhood.busLines}</td>
-                        <td>{neighborhood.ubahnLines?.name}</td>
-                        <td>{neighborhood.sbahnLines?.name}</td>
-                        <td>{neighborhood.parkingStreetSlots}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              )}
+                )}
+              </tbody>
             </table>
           </div>
         </div>

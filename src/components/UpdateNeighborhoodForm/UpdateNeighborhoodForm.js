@@ -4,9 +4,7 @@ import { useState, useEffect, } from "react";
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
 
-import { useForm } from '../../hooks/useForm';
 import { BASE_URL } from "../../config/config";
-import { useHistory } from "react-router-dom";
 
 import FormDropDown from "../FormDropDown/FormDropDown"
 
@@ -29,8 +27,6 @@ export default function UpdateNeighborhoodForm() {
 
     //////
 
-    //History Button
-    const historyGoToCreatedNeighborhood = useHistory();
 
     /*
        function addNeighborhood(e) {
@@ -95,35 +91,35 @@ export default function UpdateNeighborhoodForm() {
        }*/
 
 
-
-    const [neighborhoodProperties, setNeighborhoodProperties] = useState({});
-
-    const [DistrictName, setDistrictName] = useState([])
-
+    /*
+        const [neighborhoodProperties, setNeighborhoodProperties] = useState({});
+    
+        const [DistrictName, setDistrictName] = useState([])
+    */
     const { setLoggedUser } = useContext(GlobalContext);
 
-
-    // FETCH NEIGHBORHOOD PROPERTIES
-    useEffect(() => {
-        // Inicializando la const token
-        const token = localStorage.getItem("ACCESS_TOKEN")
-        if (token) setLoggedUser(true);
-        const API_NEIGHBORHOODS_PROPERTIES = `${BASE_URL}neighborhoodsProperties/`;
-        const params = {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
-            },
-        };
-        fetch(API_NEIGHBORHOODS_PROPERTIES, params)
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data)
-                setNeighborhoodProperties(data.neighborhoodsProperties);
-            });
-    }, [setLoggedUser]);
-
+    /*
+        // FETCH NEIGHBORHOOD PROPERTIES
+        useEffect(() => {
+            // Inicializando la const token
+            const token = localStorage.getItem("ACCESS_TOKEN")
+            if (token) setLoggedUser(true);
+            const API_NEIGHBORHOODS_PROPERTIES = `${BASE_URL}neighborhoodsProperties/`;
+            const params = {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                },
+            };
+            fetch(API_NEIGHBORHOODS_PROPERTIES, params)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    setNeighborhoodProperties(data.neighborhoodsProperties);
+                });
+        }, [setLoggedUser]);
+    */
     // FETCH NEIGHBORHOODS
     useEffect(() => {
         // Inicializando la const token
@@ -146,27 +142,27 @@ export default function UpdateNeighborhoodForm() {
                 setRefresh(false);
             });
     }, [setLoggedUser, refresh]);
-
-    // FETCH DISTRICTS 
-    useEffect(() => {
-        // Inicializando la const token
-        const token = localStorage.getItem("ACCESS_TOKEN")
-        if (token) setLoggedUser(true);
-        const API_COAT_OF_ARMS_IMAGES = `${BASE_URL}coatsofarmsimages/`;
-        const params = {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
-            },
-        };
-        fetch(API_COAT_OF_ARMS_IMAGES, params)
-            .then((response) => response.json())
-            .then((data) => {
-                setDistrictName(data.coatofarmsimages);
-            });
-    }, [setLoggedUser]);
-
+    /*
+        // FETCH DISTRICTS 
+        useEffect(() => {
+            // Inicializando la const token
+            const token = localStorage.getItem("ACCESS_TOKEN")
+            if (token) setLoggedUser(true);
+            const API_COAT_OF_ARMS_IMAGES = `${BASE_URL}coatsofarmsimages/`;
+            const params = {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                },
+            };
+            fetch(API_COAT_OF_ARMS_IMAGES, params)
+                .then((response) => response.json())
+                .then((data) => {
+                    setDistrictName(data.coatofarmsimages);
+                });
+        }, [setLoggedUser]);
+    */
     const [neighborhoodUpdate, setNeighborhoodUpdate] = useState("")
     const [searchUpdate, setSearchUpdate] = useState("")
 
@@ -322,6 +318,8 @@ export default function UpdateNeighborhoodForm() {
 
 
                                     )
+                                } else {
+                                    return (<></>)
                                 }
                             })
                         )
