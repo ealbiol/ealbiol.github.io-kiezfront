@@ -23,8 +23,8 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
     }
 
     useEffect(() => {
-            setUserName(localStorage?.getItem("USER_NAME")?.toUpperCase())
-      }, [ setUserName]) 
+        setUserName(localStorage?.getItem("USER_NAME")?.toUpperCase())
+    }, [setUserName])
 
     //History Button FindYourKiez
     const historyFindYourKiez = useHistory()
@@ -78,14 +78,14 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
     }
 
     return (
-       
-        <nav className="">
-           
 
-          
-           
+        <nav className="">
+
+
+
+
             <nav className="main-navbar" >
-              
+
                 {/* LEFT SIDE */}
                 <nav className="main-navbar__left-content">
                     <div onClick={handleGoToLanding} ><b className="main-navbar__left-content__kiezName" >KIEZ</b></div>
@@ -98,14 +98,18 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
                     )}
 
                 </nav>
-             
-             
+
+
                 {/* RIGHT SIDE */}
                 <nav className="main-navbar__right-content" >
                     <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickCompare} >COMPARE</button>
                     <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickRank} >RANK</button>
                     <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickFindYourKiez} > FIND YOUR KIEZ </button>
-                    <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickRegister} >REGISTER</button>
+
+                    {!loggedUser && (
+                        <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickRegister} >REGISTER</button>
+                    )}
+
                     {
                         localStorage?.getItem("ADMIN_TOKEN") && ( //if token exists
                             <   button className="main-navbar__right-content__buttonNavbar" onClick={handleClickBackOffice} >BACKOFFICE</button>
@@ -120,10 +124,10 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
                         <button className="main-navbar__right-content__buttonNavbar" onClick={handleClickLogout} >LOGOUT</button>
                     )}
                 </nav>
-                     
+
             </nav>
-           
-            
+
+
         </nav>
     )
 }
