@@ -3,7 +3,7 @@
 
 .TechDescription-in-Technologies{
     @include page-style();
-    height: 1000vh;
+    height: 1500vh;
     font-size: 130px;
     color: $burgermeister-green;
     padding-left: 40px;
@@ -38,5 +38,18 @@
     padding-left: 20px;
     padding-right: 20px; 
     font-size: 150px;
+}
+
+
+.sass-line-one{
+    margin-top: 40px;
+}
+
+.sass-line-two{
+    margin-top: 15px;
+}
+
+.carousel-line-two{
+    margin-top: 15px;
 }
 
