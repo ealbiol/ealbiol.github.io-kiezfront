@@ -20,8 +20,6 @@ const useForm = (initialState) => {
         } else {
             const inputName = e.target.name;
             const inputValue = e.target.value;
-            console.log(e.target);
-            console.log(form); //Imprime el objeto entero con todas las propiedades del formulario.
             setForm(previousState => {
                 /* Actualiza sólo la propiedad correspondiente al input específico */
                 return { ...previousState, [inputName]: inputValue }

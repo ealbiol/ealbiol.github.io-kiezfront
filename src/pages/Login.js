@@ -28,7 +28,6 @@ export default function Login() {
         fetch(API_LOGIN, params)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 if (data.ok === true) {
                     localStorage.setItem("ACCESS_TOKEN", data.token)
                     localStorage.setItem("ADMIN_TOKEN", data.adminToken)

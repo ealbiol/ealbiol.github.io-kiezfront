@@ -186,13 +186,11 @@ export default function FindYourKiez() {
 
 
   function parseStringLevels(num) {
-    console.log("Dentro de parseo", num);
     if (num === 0) {
       return "Very Low";
     } else if (num === 1) {
       return "Low";
     } else if (num === 2) {
-      console.log("Devolvemos medium");
       return "Medium";
     } else if (num === 3) {
       return "High";

@@ -20,7 +20,6 @@ export function checkIfAdmin(historyNoToken) {
 
 
     const token = localStorage.getItem("ADMIN_TOKEN")
-    console.log("TOKEN", token);
     if (token) {
 
         return token;

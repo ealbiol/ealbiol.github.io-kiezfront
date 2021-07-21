@@ -82,7 +82,6 @@ export default function UpdateNeighborhoodForm() {
         fetch(NEIGHBORHOODS, params)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 setRefresh(true);
                 setNeighborhoodDelete([])
             });
@@ -105,7 +104,6 @@ export default function UpdateNeighborhoodForm() {
             .then((data) => {
                 setNeighborhoodUpdate(data);
 
-                console.log(data);
             });
 
     }

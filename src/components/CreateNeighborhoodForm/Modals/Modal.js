@@ -86,7 +86,6 @@ function DistrictsElement(props) {
         setShow
     } = props;
     function changeInput() {
-        console.log(eEvent);
         handleInputChange({ target: { name: "neighborhoodDistrict", value: DistrictName } })
         setShow(false)
     }

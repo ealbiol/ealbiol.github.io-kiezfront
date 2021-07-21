@@ -33,9 +33,7 @@ export default function CreateNeighborhoodForm() {
         const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
         const token = localStorage.getItem("ADMIN_TOKEN")
         let name = form.neighborhoodName;
-        console.log("NOMBRE", form.neighborhoodName)
         e.preventDefault()
-        console.log("FORM", form);
         const params = {
             method: "POST",
             headers: {
@@ -77,10 +75,8 @@ export default function CreateNeighborhoodForm() {
             fetch(API_NEIGHBORHOODS, params)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data);
                     if (data.ok === true) {
                         alert("Neighborhood added successfully!")
-                        console.log("NOMBRE2 : ", name)
 
                         historyGoToCreatedNeighborhood.push(`/neighborhoodprofile/${name}`)
                     } else {
@@ -114,7 +110,6 @@ export default function CreateNeighborhoodForm() {
         fetch(API_NEIGHBORHOODS_PROPERTIES, params)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 setNeighborhoodProperties(data.neighborhoodsProperties);
             });
     }, [setLoggedUser]);

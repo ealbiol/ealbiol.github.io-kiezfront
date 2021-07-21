@@ -65,13 +65,10 @@ export default function FormDropDown({ neighborhoodUpdate }) {
 
 
     function updateNeighborhood(e) {
-        console.log("RESULTADO AL UPDATEAR", neighborhoodUpdate.result)
         const API_NEIGHBORHOODS = `${BASE_URL}adminUsers/update-neighborhood/${neighborhoodUpdate.result._id}`;
         const token = localStorage.getItem("ADMIN_TOKEN")
         let name = form.neighborhoodName;
-        console.log("NOMBRE", form.neighborhoodName)
         e.preventDefault()
-        console.log("FORM", form);
         const params = {
             method: "PUT",
             headers: {
@@ -113,10 +110,8 @@ export default function FormDropDown({ neighborhoodUpdate }) {
             fetch(API_NEIGHBORHOODS, params)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data);
                     if (data.ok === true) {
                         alert("Neighborhood added successfully!")
-                        console.log("NOMBRE2 : ", name)
 
                         historyGoToCreatedNeighborhood.push(`/neighborhoodprofile/${name}`)
                     } else {
@@ -180,7 +175,6 @@ export default function FormDropDown({ neighborhoodUpdate }) {
         fetch(API_NEIGHBORHOODS_PROPERTIES, params)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 setNeighborhoodProperties(data.neighborhoodsProperties);
             });
     }, [setLoggedUser]);

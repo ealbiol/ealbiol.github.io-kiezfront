@@ -80,7 +80,6 @@ export default function DeactivateNeighborhoodForm() {
         fetch(NEIGHBORHOODS, params)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 setRefresh(true);
                 setNeighborhoodDelete([])
             });
@@ -91,7 +90,6 @@ export default function DeactivateNeighborhoodForm() {
 
 
     function changeElement(e) {
-        console.log("Evento e", e)
         if (e.target.checked) {
             setNeighborhoodDelete(
 

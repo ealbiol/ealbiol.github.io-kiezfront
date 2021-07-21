@@ -29,7 +29,6 @@ export default function Register() {
                     alert("User registered successfully")
                     historyLogin.push("/login")
                 } else {
-                    console.log(data)
                     alert("Registration Error.")
                 }
 
