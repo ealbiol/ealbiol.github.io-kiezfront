@@ -23,7 +23,6 @@ export default function TablePropertiesRank({ setNeighborhoodsDynamic, ElementSo
 
 
 
-    //---- RANK ----//
 
     const [OrderEstado, setOrderEstado] = useState(true)
 
@@ -41,7 +40,6 @@ export default function TablePropertiesRank({ setNeighborhoodsDynamic, ElementSo
             const copy = [...previousValue];
             copy.sort((neighborhoodA, neighborhoodB) => {
                 let filter = null
-                // Order estado determina si va de menor a mayor o de mayor a menor
                 if (OrderEstado) {
 
                     switch (ElementSort) {

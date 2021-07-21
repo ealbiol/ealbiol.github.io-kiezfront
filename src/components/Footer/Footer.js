@@ -1,11 +1,10 @@
-import "./Footer.scss" //Imports css file to its component.
+import "./Footer.scss"
 import { useHistory } from "react-router-dom";
 
 export default function Footer() {
 
 
 
-    //History Button Tecnologies
     const historyTecnologies = useHistory()
 
     function handleClickTecnologies() {

@@ -16,13 +16,11 @@ export default function BackOffice() {
 
     const historyNoToken = useHistory();
 
-    //Called Function from Functions.js
     useEffect(() => {
 
         checkIfLogged(setLoggedUser, historyNoToken)
     }, [setLoggedUser, historyNoToken])
 
-    //Estado mostrar componente CreateNeighborhoodForm
     const [ActivateCreateNgBox, setActivateCreateNgBox] = useState(false)
     const [ActivateDeactivateNgBox, setActivateDeactivateNgBox] = useState(false)
     const [ActivateUpdateNgBox, setActivateUpdateNgBox] = useState(false)
@@ -44,17 +42,12 @@ export default function BackOffice() {
     return (
         <div className="main-backoffice" >
 
-            {/* <div className="main-backoffice__welcome" >
-                <div> Welcome, {localStorage.getItem("USER_NAME")} ! </div>
-            </div> */}
+
 
             <div className="main-backoffice__bo-navbar" >
 
 
-                {/* <div onClick={() => setActivateCreateNgBox(!ActivateCreateNgBox)} >
-                    {ActivateCreateNgBox && (<div  >▼</div>)}
-                    {ActivateCreateNgBox || (<div  >▲</div>)}
-                </div> */}
+
                 <div onClick={() => activateBackCreateComponent()} className="main-backoffice__bo-navbar__unit" >{ActivateCreateNgBox && (<div className="testS"  >Hide</div>)}
                     {ActivateCreateNgBox || (<div  >Add a New Neighborhood</div>)}</div>
 

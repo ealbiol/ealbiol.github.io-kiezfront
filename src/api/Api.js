@@ -1,6 +1,5 @@
 
-// Inicializando la const token
-import {BASE_URL} from "../config/config";
+import { BASE_URL } from "../config/config";
 export function getNeigbourhoodsFromApi(setLoggedUser) {
 
 
@@ -13,7 +12,7 @@ export function getNeigbourhoodsFromApi(setLoggedUser) {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+            "Authorization": token
         },
     };
     return fetch(API_NEIGHBORHOODS, params)

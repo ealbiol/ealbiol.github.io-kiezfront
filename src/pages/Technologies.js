@@ -12,14 +12,11 @@ export default function Technologies() {
 
     const [Technologies, setTechnologies] = useState([]);
 
-    //useContext: Recibiendo desde Router 'setFilteredResultGlobal': (ATERRIZAJE de set para recoger datos)
     const { setLoggedUser } = useContext(GlobalContext);
 
-    //History Logo Link
     const historyLink = useHistory();
 
     useEffect(() => {
-        // Inicializando la const token
         const token = checkIfLogged(setLoggedUser, historyLink)
 
         const API_TECHNOLOGIES = `${BASE_URL}technologies/`;
@@ -27,7 +24,7 @@ export default function Technologies() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'technologies'
+                "Authorization": token
             },
         };
         fetch(API_TECHNOLOGIES, params)
@@ -86,7 +83,6 @@ function TechnologyElement(props) {
         <div className="main-technologies " >
             <div className="main-technologies__property-box " >
 
-                {/* <div className="main-technologies__property-box__techName " >{propertyName?.toUpperCase()}</div> */}
                 <img onClick={handleLink} className="main-technologies__property-box__technology-image " width="250px" src={src} alt="Tech icon" />
                 <div className="main-technologies__property-box__sub-techName " >{subPropertyName?.toUpperCase()}</div>
             </div>

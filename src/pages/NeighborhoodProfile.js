@@ -15,23 +15,19 @@ export default function NeighborhoodProfile() {
 
     const [NeighborhoodInfo, setNeighborhoodInfo] = useState({})
 
-    const { nombreBarrio } = useParams(); //Devuelve un objeto con sus parametros recibidos por URL.
+    const { nombreBarrio } = useParams();
 
 
-    //useContext: Recibiendo desde Router 'setFilteredResultGlobal': (ATERRIZAJE de set para recoger datos)
     const { setLoggedUser } = useContext(GlobalContext);
 
-    //Push called in Functions.js
     const historyNoToken = useHistory();
 
-    //Called Function from Functions.js
     checkIfLogged(setLoggedUser, historyNoToken)
 
 
 
     useEffect(() => {
         const API_NEIGHBORHOODS = `${BASE_URL}neighborhoods/${nombreBarrio}`
-        // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
 
@@ -39,7 +35,7 @@ export default function NeighborhoodProfile() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                "Authorization": token
             },
         };
         fetch(API_NEIGHBORHOODS, params)

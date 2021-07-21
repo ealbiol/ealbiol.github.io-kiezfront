@@ -4,7 +4,7 @@ export default function PropertiesGrid({ NeighborhoodInfo }) {
   return (
     <div className="main-PropertiesGrid ">
       <div className="propertiesGrid-parent">
-        
+
         <PropertiesGridElement
           propertyName={NeighborhoodInfo?.district?.name?.toUpperCase()}
           src={NeighborhoodInfo?.district?.image}
@@ -101,9 +101,7 @@ export default function PropertiesGrid({ NeighborhoodInfo }) {
   );
 }
 
-//Componente Property Grid Element: Plantilla de cada elemento del grid.
-//Es otro componente dentro del mismo archivo PropertiesGrid.js
-//Parecido al ejercicio 1 de React.
+
 function PropertiesGridElement(props) {
   const {
     propertyName,

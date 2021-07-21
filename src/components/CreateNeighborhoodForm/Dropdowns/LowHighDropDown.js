@@ -1,15 +1,6 @@
 import Dropdown from "react-bootstrap/Dropdown";
 
-//Activity Rate
 
-// Using Activity Rate subproperties for other properties such as:
-
-//inhabitantsDensity
-//gymDensity
-//restaurantsDensity
-//greenAreaDensity
-//cleanness
-//airQuality
 
 export default function LowHighDropDown(props) {
     const { neighborhoodProperties } = props;

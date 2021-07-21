@@ -1,15 +1,9 @@
 import "./UpdateNeighborhoodForm.scss"
-
 import { useState, useEffect, } from "react";
 import { GlobalContext } from "../../Router";
 import { useContext } from "react";
-
 import { BASE_URL } from "../../config/config";
-
 import FormDropDown from "../FormDropDown/FormDropDown"
-
-
-
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form'
 
@@ -25,104 +19,11 @@ export default function UpdateNeighborhoodForm() {
 
 
 
-    //////
 
-
-    /*
-       function addNeighborhood(e) {
-           const API_NEIGHBORHOODS = `${BASE_URL}adminUsers`;
-           const token = localStorage.getItem("ADMIN_TOKEN")
-           let name = form.neighborhoodName;
-           console.log("NOMBRE", form.neighborhoodName)
-           e.preventDefault()
-           console.log("FORM", form);
-           const params = {
-               method: "POST",
-               headers: {
-                   "Content-Type": "application/json",
-                   "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
-               },
-               body: JSON.stringify(form)
-           };
-          
-           if (form.distrcit === "" ||
-               form.neighborhoodName === "" ||
-               form.architecturePredominance?.name === "" ||
-               form.internationality === "" ||
-               form.partyWinner?.name === "" ||
-               form.transportZone?.name === "" ||
-               form.activityRate?.name === "" ||
-               form.lifeCost?.name === "" ||
-               form.inhabitantsDensity?.name === "" ||
-               form.gymDensity?.name === "" ||
-               form.restaurantsDensity?.name === "" ||
-               form.cinemas?.name === "" ||
-               form.museums?.name === "" ||
-               form.nightLife?.name === "" ||
-               form.airQuality?.name === "" ||
-               form.cleanness?.name === "" ||
-               form.greenAreasDensity?.name === "" ||
-               form.noiseLevel?.name === "" ||
-               form.noiseLevel?.name === "" ||
-               form.safety?.name === "" ||
-               form.privateParkingDensity?.name === "" ||
-               form.photo === "" ||
-               form.lng === "" ||
-               form.lat === "" ||
-               form.citizenAverageAge?.name === "" ||
-               form.superMarketsDensity?.name === ""
-           ) {
-   
-               alert("Properties Missing")
-           } else {
-               fetch(API_NEIGHBORHOODS, params)
-                   .then((response) => response.json())
-                   .then((data) => {
-                       if (data.ok === true) {
-                           alert("Neighborhood added successfully!")
-   
-                           historyGoToCreatedNeighborhood.push(`/neighborhoodprofile/${name}`)
-                       } else {
-                           alert("Properties missing.")
-                       }
-                   });
-           }
-   
-       }*/
-
-
-    /*
-        const [neighborhoodProperties, setNeighborhoodProperties] = useState({});
-    
-        const [DistrictName, setDistrictName] = useState([])
-    */
     const { setLoggedUser } = useContext(GlobalContext);
 
-    /*
-        // FETCH NEIGHBORHOOD PROPERTIES
-        useEffect(() => {
-            // Inicializando la const token
-            const token = localStorage.getItem("ACCESS_TOKEN")
-            if (token) setLoggedUser(true);
-            const API_NEIGHBORHOODS_PROPERTIES = `${BASE_URL}neighborhoodsProperties/`;
-            const params = {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
-                },
-            };
-            fetch(API_NEIGHBORHOODS_PROPERTIES, params)
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data)
-                    setNeighborhoodProperties(data.neighborhoodsProperties);
-                });
-        }, [setLoggedUser]);
-    */
-    // FETCH NEIGHBORHOODS
+
     useEffect(() => {
-        // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
         const NEIGHBORHOODS = `${BASE_URL}neighborhoods`;
@@ -130,7 +31,7 @@ export default function UpdateNeighborhoodForm() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                "Authorization": token
             },
 
         };
@@ -142,66 +43,14 @@ export default function UpdateNeighborhoodForm() {
                 setRefresh(false);
             });
     }, [setLoggedUser, refresh]);
-    /*
-        // FETCH DISTRICTS 
-        useEffect(() => {
-            // Inicializando la const token
-            const token = localStorage.getItem("ACCESS_TOKEN")
-            if (token) setLoggedUser(true);
-            const API_COAT_OF_ARMS_IMAGES = `${BASE_URL}coatsofarmsimages/`;
-            const params = {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
-                },
-            };
-            fetch(API_COAT_OF_ARMS_IMAGES, params)
-                .then((response) => response.json())
-                .then((data) => {
-                    setDistrictName(data.coatofarmsimages);
-                });
-        }, [setLoggedUser]);
-    */
+
     const [neighborhoodUpdate, setNeighborhoodUpdate] = useState("")
     const [searchUpdate, setSearchUpdate] = useState("")
 
-    /*
-        const  [initialFormState, setInitialFormState] = useState(initialState) = {
-            neighborhoodDistrict: "",
-            neighborhoodName: "",
-            neighborhoodArchitecture: "",
-            neighborhoodInternationality: "",
-            neighborhoodPartyWinner: "",
-            neighborhoodTransportZone: "",
-            neighborhoodActivityRate: "",
-            neighborhoodLifeCost: "",
-            neighborhoodInhabitantsDensity: "",
-            neighborhoodCitizenAverageAge: "",
-            neighborhoodGymDensity: "",
-            neighborhoodRestaurantsDensity: "",
-            neighborhoodCinemas: "",
-            neighborhoodMuseums: "",
-            neighborhoodAirQuality: "",
-            neighborhoodCleanness: "",
-            neighborhoodGreenAreasDensity: "",
-            neighborhoodNoiseLevel: "",
-            neighborhoodSafety: "",
-            neighborhoodPrivateParkingDensity: "",
-            neighborhoodPhoto: "",
-            neighborhoodLng: "",
-            neighborhoodLat: "",
-            neighborhoodsuperMarketsDensity: "",
-            neighborhoodNightLife: ""
-        };
-    */
 
-    //useState Form
-    //    const [form, handleInputChange] = useForm(initialFormState);
 
 
     function handleInputChangeRecord(e) {
-        //handleInputChange(e)
         setSearchUpdate(e.target.value)
         setNeighborhoodsNameDynamic(NeighborhoodsName.filter((neighborhood) => {
             return neighborhood.name
@@ -219,7 +68,6 @@ export default function UpdateNeighborhoodForm() {
         if (token) setLoggedUser(true);
         const NEIGHBORHOODS = `${BASE_URL}neighborhoods/deactivate`;
 
-        // Objeto
         const params = {
             method: "PUT",
             headers: {
@@ -307,7 +155,6 @@ export default function UpdateNeighborhoodForm() {
                                     return (
 
                                         <Button
-                                            //checked={NeighborhoodDelete.includes(neighborhood.name)}
                                             onClick={e => selectElement(e)}
                                             variant="primary"
                                             type="button"
@@ -326,17 +173,7 @@ export default function UpdateNeighborhoodForm() {
                     }
 
 
-                    {/* <p>NEIGHBORHOODS TO DELETE:</p> */}
-                    {/* {
-                        NeighborhoodDelete && (
-                            NeighborhoodDelete.map(del => {
-                                return (
-                                    <p>{del}</p>
-                                )
-                            }))}
-                    <Button onClick={(e) => (deleteNeighborhood(e))} variant="primary" type="submit" size="lg" block>
-                        Borrar
-                    </Button> */}
+
 
 
                 </Form>

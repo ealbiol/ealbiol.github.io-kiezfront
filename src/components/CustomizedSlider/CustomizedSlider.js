@@ -47,33 +47,19 @@ const PrettoSlider = withStyles({
 
 
 export default function CustomizedSlider(props) {
-  // Destructuring
   const { index, property, setJSONFilter, JSONFilter } = props;
   const { min, max, marks, valueText } = property;
 
 
-  //console.log("Imprimiendo props en customized " , props);
 
-  // Estructuring
-  /*props:
-  {name:{property.name},
-   min:{property.min} ,
-   max:{property.max}
-  }*/
-  // 1 - Actualizar el estado correspondiente al elemento seleccionado
   const classes = useStyles();
   function test(index, e) {
-    // Test
 
     if (e.target.innerText !== "") {
-      // console.log(e.target.innerText)
       const text = valueText(parseInt(e.target.innerText))
-      //console.log("TEXT ", text);
       switch (index) {
 
         case 0:
-          // ... Obten el objeto antiguo y sumale lo de la derecha
-          // Spread operator
           setJSONFilter({ ...JSONFilter, architecturePredominance: text });
           break;
 
@@ -109,17 +95,14 @@ export default function CustomizedSlider(props) {
           setJSONFilter({ ...JSONFilter, gymDensity: text });
           break;
 
-        // NOT WORKING 
         case 9:
           setJSONFilter({ ...JSONFilter, supermarketsDensity: text });
           break;
 
-        // NOT WORKING
         case 10:
           setJSONFilter({ ...JSONFilter, cinemas: text });
           break;
 
-        // NOT WORKING
         case 11:
           setJSONFilter({ ...JSONFilter, museums: text });
           break;

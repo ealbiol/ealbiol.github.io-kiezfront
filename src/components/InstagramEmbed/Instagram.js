@@ -14,8 +14,7 @@ export default function Instagram() {
             Hola desde Instagram.js
 
             <InstagramEmbed
-                // clientAccessToken='258512152279834|c7513307ed8f2098ce774e94d63b040d'
-                // clientAccessToken={`${AppID}|${ClientToken}`}
+
 
                 url='https://instagr.am/p/Zn1Xz/'
                 maxWidth={375}

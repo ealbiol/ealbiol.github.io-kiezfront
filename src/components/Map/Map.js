@@ -26,10 +26,8 @@ export default function Map({ NeighborhoodsDynamic }) {
 
 
 
-  //History Button
   const historyIrABarrio = useHistory();
 
-  //History Function
   function irABarrio(barrio) {
     historyIrABarrio.push(`/neighborhoodprofile/${barrio}`);
   }
@@ -245,7 +243,6 @@ export default function Map({ NeighborhoodsDynamic }) {
           {}]
         }}
       >
-        { /* Child components, such as markers, info windows, etc. */}
 
 
         {

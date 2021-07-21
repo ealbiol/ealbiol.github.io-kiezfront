@@ -11,8 +11,7 @@
     padding-right: 10px;
     padding-left: 290px;
     padding-bottom: 5px;
-    // &::-moz-selection,
-    // &::selection { border: none }
+   
         &__inputSearch{
             @include motto-style();
             padding: 5px;

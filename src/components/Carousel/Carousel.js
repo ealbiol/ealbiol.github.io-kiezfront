@@ -16,18 +16,16 @@ export default function Carousel() {
 
   useEffect(() => {
     getNeigbourhoodsFromApi(setLoggedUser).then(response => {
-      // console.log(response)
       setNeighborhood(response);
     }).catch(() => {
       alert("No hay conexión con el servidor")
     })
-  }, [])// eslint-disable-line react-hooks/exhaustive-deps
+  }, [])
 
 
 
 
 
-  //History Button
   const historyRandomNg = useHistory();
 
   function handleRandomNeighborhood(e) {
@@ -38,16 +36,6 @@ export default function Carousel() {
 
   return (
     <div className="content-slider ">
-
-      {/* 
-      {neighborhood && //---> Condicional añadido para evitar errores de sincronicidad.
-        neighborhood.map((neighborhood, index) => {
-          return <div>
-
-            <div>{neighborhood?.name}</div>
-
-          </div>
-        })} */}
 
 
       < div className="slider">

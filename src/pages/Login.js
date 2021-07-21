@@ -3,23 +3,17 @@ import './Login.scss'
 import { useForm } from '../hooks/useForm';
 import { GlobalContext } from "../Router";
 import { useContext } from "react";
-/**
- * Login component that allows users to login and get JWT token to access differetn APIS
- * @returns 
- */
+
 
 import { BASE_URL } from "../config/config";
 
 export default function Login() {
 
     const initialFormState = { email: "", password: "" };
-    const [form, handleInputChange] = useForm(initialFormState); // Custom Hook
+    const [form, handleInputChange] = useForm(initialFormState);
     const { setLoggedUser } = useContext(GlobalContext);
 
-    /**
-     * 
-     * @param {*} e - e is the event of the form
-     */
+
 
     function LoginClient(e) {
         e.preventDefault();
@@ -35,8 +29,6 @@ export default function Login() {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                //alert("Login successful")
-                //Creación cookie que contiene el token. El token esta disponible en todo el cliente.
                 if (data.ok === true) {
                     localStorage.setItem("ACCESS_TOKEN", data.token)
                     localStorage.setItem("ADMIN_TOKEN", data.adminToken)
@@ -57,7 +49,6 @@ export default function Login() {
 
 
 
-    //History Button CreateOne
     const historyCreateOne = useHistory()
 
     function handleCreateOne() {

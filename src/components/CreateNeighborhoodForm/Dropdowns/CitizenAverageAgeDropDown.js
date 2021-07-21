@@ -1,10 +1,6 @@
 import Dropdown from "react-bootstrap/Dropdown";
 
-//Activity Rate
 
-// Using Activity Rate subproperties for other properties such as:
-
-//InhabitantsDensity
 
 export default function CitizenAverageAgeDropDown(props) {
     const { neighborhoodProperties } = props;

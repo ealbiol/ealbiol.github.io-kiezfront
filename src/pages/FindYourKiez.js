@@ -1,4 +1,4 @@
-import "./FindYourKiez.scss"; //Imports css file to its component.
+import "./FindYourKiez.scss";
 import MottoFindYourKiez from "../components/MottoFindYourKiez/MottoFindYourKiez";
 import { useState, useEffect } from "react";
 import CoatsOfArms from "../components/CoatsOfArms/CoatsOfArms";
@@ -13,13 +13,11 @@ import { BASE_URL } from "../config/config";
 
 export default function FindYourKiez() {
 
-  //useContext: Recibiendo desde Router 'setFilteredResultGlobal': (ATERRIZAJE de set para recoger datos)
   const { setLoggedUser } = useContext(GlobalContext);
 
 
-  //ARCHITECTURE PREDOMINANCE
   function parseArchitecturePredominance(num) {
-    //console.log("NUMERO", typeof(numInt))
+
     if (num === 0) {
       return "Old Town";
     } else if (num === 1) {
@@ -56,7 +54,7 @@ export default function FindYourKiez() {
     },
   ];
 
-  //INTERNATIONALITY
+
   function parseInternationality(num) {
     if (num <= 10) {
       return "10%";
@@ -125,7 +123,6 @@ export default function FindYourKiez() {
     },
   ];
 
-  //PARTY WINNER
   function parsePartyWinner(num) {
     if (num === 0) {
       return "CDU";
@@ -162,7 +159,6 @@ export default function FindYourKiez() {
     },
   ];
 
-  //TRANSPORT ZONE
   function parseTransportZone(num) {
     if (num === 0) {
       return "A";
@@ -188,7 +184,7 @@ export default function FindYourKiez() {
     },
   ];
 
-  //STRING LEVELS: LOW, MEDIUM, ETC
+
   function parseStringLevels(num) {
     console.log("Dentro de parseo", num);
     if (num === 0) {
@@ -228,7 +224,6 @@ export default function FindYourKiez() {
     },
   ];
 
-  //LIFECOST
   function parseLifeCost(num) {
     if (num === 0) {
       return "Very Economic";
@@ -266,7 +261,6 @@ export default function FindYourKiez() {
     },
   ];
 
-  //CITIZEN AVERAGE AGE
   function parseCitizenAverageAge(num) {
     if (num === 0) {
       return "30";
@@ -310,7 +304,6 @@ export default function FindYourKiez() {
     },
   ];
 
-  //NUMBER LEVELS
   function parseNumbers(num) {
     if (num === 0) {
       return "0";
@@ -542,18 +535,14 @@ export default function FindYourKiez() {
 
       <div className="main-separator">
 
-        {/* RANGES BOX */}
         <div className="findYourKiez-main__rangesbox ">
 
-          {/* TITLE */}
           <div className="findYourKiez-main__rangesbox__title-ranges ">
             SET YOUR KEY PREFERENCES
           </div>
 
-          {/* RANGES BOX */}
           <div className="findYourKiez-main__rangesbox__sub-rangesbox">
 
-            {/* .MAP */}
             <div className="">
               {NProperties.map((property, index) => {
                 return (
@@ -579,16 +568,10 @@ export default function FindYourKiez() {
             </div>
           </div>
 
-          {/* <button className="findYourKiez-main__rangesbox__buttonFind"
-            onClick={() => fetchBarrios()}
-          >
-            FIND
-          </button>
-            */}
+
         </div>
 
 
-        {/* COATS OF ARMS */}
         <div className="findYourKiez-main__empty1 ">
 
           <CoatsOfArms FilteredResult={FilteredResult} />

@@ -1,4 +1,4 @@
-import "./Error.scss" //Imports css file to its component.
+import "./Error.scss"
 
 
 export default function Error() {

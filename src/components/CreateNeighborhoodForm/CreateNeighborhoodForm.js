@@ -26,7 +26,6 @@ import { useHistory } from "react-router-dom";
 export default function CreateNeighborhoodForm() {
 
 
-    //History Button
     const historyGoToCreatedNeighborhood = useHistory();
 
 
@@ -41,7 +40,7 @@ export default function CreateNeighborhoodForm() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                "Authorization": token
             },
             body: JSON.stringify(form)
         };
@@ -101,9 +100,7 @@ export default function CreateNeighborhoodForm() {
     const { setLoggedUser } = useContext(GlobalContext);
 
 
-    // FETCH NEIGHBORHOOD PROPERTIES
     useEffect(() => {
-        // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
         const API_NEIGHBORHOODS_PROPERTIES = `${BASE_URL}neighborhoodsProperties/`;
@@ -111,7 +108,7 @@ export default function CreateNeighborhoodForm() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                "Authorization": token
             },
         };
         fetch(API_NEIGHBORHOODS_PROPERTIES, params)
@@ -124,9 +121,8 @@ export default function CreateNeighborhoodForm() {
 
 
 
-    // FETCH DISTRICTS 
     useEffect(() => {
-        // Inicializando la const token
+
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
         const API_COAT_OF_ARMS_IMAGES = `${BASE_URL}coatsofarmsimages/`;
@@ -134,7 +130,7 @@ export default function CreateNeighborhoodForm() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                "Authorization": token
             },
         };
         fetch(API_COAT_OF_ARMS_IMAGES, params)
@@ -177,7 +173,6 @@ export default function CreateNeighborhoodForm() {
     };
 
 
-    //useState Form
     const [form, handleInputChange] = useForm(initialFormState);
 
 
@@ -193,7 +188,7 @@ export default function CreateNeighborhoodForm() {
 
                         <Form onSubmit={(e) => addNeighborhood(e)} >
 
-                            {/* __________________1/20 NEIGHBORHOOD DISTRICT__________________ */}
+                            {/* __________________NEIGHBORHOOD DISTRICT__________________ */}
 
                             <Form.Group controlId="InputDistrict">
                                 <div className="form-input" >
@@ -213,7 +208,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________2/20 NEIGHBORHOOD NAME DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD NAME__________________ */}
 
                             <Form.Group controlId="InputName">
                                 <div className="form-input" >
@@ -242,7 +237,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________3/20 NEIGHBORHOOD ARCHITECTURE DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD ARCHITECTURE__________________ */}
 
                             <Form.Group controlId="InputArchitecture">
                                 <div className="form-input " >
@@ -294,7 +289,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________4/20 NEIGHBORHOOD INTERNATIONALITY DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD INTERNATIONALITY__________________ */}
 
                             <Form.Group controlId="InputInternationality">
                                 <div className="form-input" >
@@ -327,7 +322,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________5/20 NEIGHBORHOOD PARTY WINNER DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD PARTY WINNER__________________ */}
 
                             <Form.Group controlId="InputPartyWinner">
                                 <div className="form-input" >
@@ -371,7 +366,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________6/20 NEIGHBORHOOD TRANSPORT ZONE DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD TRANSPORT ZONE__________________ */}
 
                             <Form.Group controlId="InputTransportZone">
                                 <div className="form-input" >
@@ -413,7 +408,7 @@ export default function CreateNeighborhoodForm() {
                             </Form.Group>
 
 
-                            {/* __________________7/20 NEIGHBORHOOD ACTIVITY RATE DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD ACTIVITY RATE__________________ */}
 
 
                             <Form.Group controlId="InputActivityRate">
@@ -457,7 +452,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________8/20 NEIGHBORHOOD LIFE COST DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD LIFE COST__________________ */}
 
 
                             <Form.Group controlId="InputLifeCost">
@@ -504,7 +499,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________9/20 NEIGHBORHOOD INHABITANTS DENSITY DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD INHABITANTS DENSITY__________________ */}
 
                             <Form.Group controlId="InputInhabitantsDensity">
                                 <div className="form-input" >
@@ -546,7 +541,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________10/20 NEIGHBORHOOD CITIZENS AVERAGE AGE DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD CITIZENS AVERAGE AGE__________________ */}
 
                             <Form.Group controlId="InputCitizenAverageAge">
                                 <div className="form-input" >
@@ -587,7 +582,7 @@ export default function CreateNeighborhoodForm() {
                             </Form.Group>
 
 
-                            {/* __________________11/20 NEIGHBORHOOD GYM DENSITY DONE__________________ */}
+                            {/* __________________NEIGHBORHOOD GYM DENSITY__________________ */}
 
                             <Form.Group controlId="InputGymDensity">
                                 <div className="form-input" >
@@ -629,7 +624,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________12/20 NEIGHBORHOOD RESTAURANTS DENSITY__________________ */}
+                            {/* __________________NEIGHBORHOOD RESTAURANTS DENSITY__________________ */}
 
                             <Form.Group controlId="InputRestaurantsDensity">
                                 <div className="form-input" >
@@ -671,7 +666,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________13/20 NEIGHBORHOOD CINEMAS__________________ */}
+                            {/* __________________NEIGHBORHOOD CINEMAS__________________ */}
 
                             <Form.Group controlId="InputCinemas">
                                 <div className="form-input" >
@@ -712,7 +707,7 @@ export default function CreateNeighborhoodForm() {
                             </Form.Group>
 
 
-                            {/* __________________14/20 NEIGHBORHOOD MUSEUMS__________________ */}
+                            {/* __________________NEIGHBORHOOD MUSEUMS__________________ */}
 
                             <Form.Group controlId="InputMuseums">
                                 <div className="form-input" >
@@ -754,7 +749,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________15/20 NEIGHBORHOOD AIR QUALITY__________________ */}
+                            {/* __________________NEIGHBORHOOD AIR QUALITY__________________ */}
 
                             <Form.Group controlId="InputAirQuality">
                                 <div className="form-input" >
@@ -796,7 +791,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________16/20 NEIGHBORHOOD CLEANNESS__________________ */}
+                            {/* __________________NEIGHBORHOOD CLEANNESS__________________ */}
 
                             <Form.Group controlId="InputCleanness">
                                 <div className="form-input" >
@@ -838,7 +833,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________17/20 NEIGHBORHOOD GREEN AREA DENSITY__________________ */}
+                            {/* __________________NEIGHBORHOOD GREEN AREA DENSITY__________________ */}
 
                             <Form.Group controlId="InputGreenAreasDensity">
                                 <div className="form-input" >
@@ -880,7 +875,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________18/20 NEIGHBORHOOD NOISE LEVEL__________________ */}
+                            {/* __________________NEIGHBORHOOD NOISE LEVEL__________________ */}
 
                             <Form.Group controlId="InputNoiseLevel">
                                 <div className="form-input" >
@@ -921,7 +916,7 @@ export default function CreateNeighborhoodForm() {
                             </Form.Group>
 
 
-                            {/* __________________19/20 NEIGHBORHOOD SAFETY__________________ */}
+                            {/* __________________NEIGHBORHOOD SAFETY__________________ */}
 
                             <Form.Group controlId="InputSafety">
                                 <div className="form-input" >
@@ -963,7 +958,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________20/20 PRIVATE PARKING DENSITY SAFETY__________________ */}
+                            {/* __________________PRIVATE PARKING DENSITY SAFETY__________________ */}
 
                             <Form.Group controlId="InputPrivateParkingDensity">
                                 <div className="form-input" >
@@ -1006,7 +1001,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________21/21 NEIGHBORHOOD PHOTO__________________ */}
+                            {/* __________________NEIGHBORHOOD PHOTO__________________ */}
 
                             <Form.Group controlId="InputPhoto">
                                 <div className="form-input" >
@@ -1033,7 +1028,7 @@ export default function CreateNeighborhoodForm() {
                             </Form.Group>
 
 
-                            {/* __________________21/21 NEIGHBORHOOD LNG__________________ */}
+                            {/* __________________NEIGHBORHOOD LNG__________________ */}
 
                             <Form.Group controlId="InputLng">
                                 <div className="form-input" >
@@ -1060,7 +1055,7 @@ export default function CreateNeighborhoodForm() {
                             </Form.Group>
 
 
-                            {/* __________________22/22 NEIGHBORHOOD LNG__________________ */}
+                            {/* __________________NEIGHBORHOOD LNG__________________ */}
 
                             <Form.Group controlId="InputLat">
                                 <div className="form-input" >
@@ -1088,7 +1083,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________7/20 NEIGHBORHOOD SUPERMARKETS DENSITY__________________ */}
+                            {/* __________________NEIGHBORHOOD SUPERMARKETS DENSITY__________________ */}
 
 
                             <Form.Group controlId="superMarketsDensity">
@@ -1131,7 +1126,7 @@ export default function CreateNeighborhoodForm() {
 
 
 
-                            {/* __________________7/20 NEIGHBORHOOD NIGHT LIFE__________________ */}
+                            {/* __________________NEIGHBORHOOD NIGHT LIFE__________________ */}
 
 
                             <Form.Group controlId="nightLife">
@@ -1175,25 +1170,6 @@ export default function CreateNeighborhoodForm() {
 
 
 
-
-
-
-                            {/* TOOLTIP */}
-                            {/* <>
-                                {['top', 'right', 'bottom', 'left'].map((placement) => (
-                                    <OverlayTrigger
-                                        key={placement}
-                                        placement={placement}
-                                        overlay={
-                                            <Tooltip id={`tooltip-${neighborhoodProperties?.name}`}>
-                                                Tooltip on <strong>{neighborhoodProperties?.name}</strong>.
-                                            </Tooltip>
-                                        }
-                                    >
-                                        <Button variant="secondary">Tooltip on {placement}</Button>
-                                    </OverlayTrigger>
-                                ))}
-                            </> */}
 
 
 

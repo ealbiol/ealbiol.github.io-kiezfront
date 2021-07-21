@@ -1,6 +1,6 @@
 import MottoRank from "../components/MottoRank/MottoRank"
 import TableRank from "../components/TableRank/TableRank"
-import "./Rank.scss" //Imports css file to its component.
+import "./Rank.scss"
 import { useState } from 'react';
 
 import checkIfLogged from "../Functions/Functions"
@@ -15,16 +15,11 @@ export default function Rank() {
 
     const historyNoToken = useHistory();
 
-    //Called Function from Functions.js
     checkIfLogged(setLoggedUser, historyNoToken)
 
     function rankActive() {
 
-        /*if (tableVisibilityEstado === true){
-            setTableVisibilityEstado(false)
-        } else {
-            setTableVisibilityEstado(true)
-        }*/
+
         setTableVisibilityEstado(!tableVisibilityEstado)
 
     }
@@ -33,7 +28,6 @@ export default function Rank() {
 
     return (
         <div className="main-rank">
-            {/* Add orangebox to see main space */}
 
             <MottoRank />
             <div className="main-rank__div-buttonRank" >

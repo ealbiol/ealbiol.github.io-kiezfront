@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 
 export default function BoxNeighborhoods({ activateBox, NeighborhoodsDynamic }) {
 
-    //History Button
     const historyBarrio = useHistory();
 
     function handleBarrio(e) {

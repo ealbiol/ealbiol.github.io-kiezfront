@@ -1,9 +1,6 @@
 import Dropdown from "react-bootstrap/Dropdown";
 
 
-// Using Cinemas subproperties for other properties such as:
-
-//Museums
 
 export default function CinemasAndMuseumsDropDown(props) {
     const { neighborhoodProperties } = props;

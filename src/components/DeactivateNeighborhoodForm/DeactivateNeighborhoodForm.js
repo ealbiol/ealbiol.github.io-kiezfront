@@ -19,9 +19,7 @@ export default function DeactivateNeighborhoodForm() {
     const [refresh, setRefresh] = useState(false);
     const { setLoggedUser } = useContext(GlobalContext);
 
-    // FETCH NEIGHBORHOODS
     useEffect(() => {
-        // Inicializando la const token
         const token = localStorage.getItem("ACCESS_TOKEN")
         if (token) setLoggedUser(true);
         const NEIGHBORHOODS = `${BASE_URL}neighborhoods`;
@@ -29,7 +27,7 @@ export default function DeactivateNeighborhoodForm() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+                "Authorization": token
             },
 
         };
@@ -49,7 +47,6 @@ export default function DeactivateNeighborhoodForm() {
         neighborhoodName: ""
     };
 
-    //useState Form
     const [form, handleInputChange] = useForm(initialFormState);
     function handleInputChangeRecord(e) {
         handleInputChange(e)
@@ -68,7 +65,6 @@ export default function DeactivateNeighborhoodForm() {
         if (token) setLoggedUser(true);
         const NEIGHBORHOODS = `${BASE_URL}neighborhoods/deactivate`;
 
-        // Objeto
         const params = {
             method: "PUT",
             headers: {
@@ -80,11 +76,7 @@ export default function DeactivateNeighborhoodForm() {
             })
         };
 
-        //console.log("Delete")
-        /* req.body
-         req.headers
-         req.method*/
-        // Pasas el objeto por parametro
+
         fetch(NEIGHBORHOODS, params)
             .then((response) => response.json())
             .then((data) => {

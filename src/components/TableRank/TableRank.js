@@ -183,7 +183,6 @@ export default function TableRank(props) {
 
 
 
-    //---- COMPARE ----//
     // Neighborhoods Static State
     const [neighborhoods] = useState(initialState);
 
@@ -217,7 +216,6 @@ export default function TableRank(props) {
     return (
 
         <div className="main-TableCompare" >
-            {/* props.tableVisibility && === if true */}
             {props.tableVisibility &&
                 (
                     <div>
@@ -231,7 +229,6 @@ export default function TableRank(props) {
                                 {props.useHeader &&
                                     (
                                         <TablePropertiesRank setNeighborhoodsDynamic={setNeighborhoodsDynamic} ElementSort={ElementSort} setElementSort={setElementSort} />
-                                        //Pasamos por props el estado setNeighborhoodsDynamic
                                     )
                                 }
 

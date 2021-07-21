@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> CLI that generates beautiful README.md files.
+> DESCRIPTION PENDING
 
 ### 🏠 [Homepage](https://github.com/ealbiol/kiezfront)
 
@@ -27,14 +27,9 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm start
 ```
 
-## Run tests
-
-```sh
-npm run test
-```
 
 ## Author
 
@@ -56,5 +51,3 @@ Give a ⭐️ if this project helped you!
 Copyright © 2021 [Eduard Albiol](https://github.com/ealbiol).<br />
 This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

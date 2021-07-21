@@ -2,7 +2,6 @@
 
 
 .motto-findYourKiez{
-    //@include motto-styile() ---> En variables.scss está su contenido de estilos.
     @include motto-style();
 
         &__content{

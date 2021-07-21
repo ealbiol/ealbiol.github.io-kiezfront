@@ -3,7 +3,6 @@
 /*------------------ U N I V E R S A L   S E L E C T O R ------------------*/
 
 *{
-    // font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -103,11 +102,7 @@
     text-align: center;
     height: 100vh; 
     
-/*
-APP es el padre de todos. Router vendría después?
-Todas las pantallas tienen una altura de 100vh.
-Más allé de 100vh se crea un scroll down
-*/
+
 }
 
 
@@ -117,7 +112,7 @@ Más allé de 100vh se crea un scroll down
 .brouter-father{
     display: flex;
     flex-direction: column;
-    height: 100%; /* % es sobre el tamaño del padre */
+    height: 100%; 
 }
 
 
@@ -129,17 +124,6 @@ Más allé de 100vh se crea un scroll down
 
 
 
-
-@media (max-width: $breakpoint-Samsung-S10){
-
-    #root{
-       // max-width: 450px;
-       // width: 450px;
-      //  overflow-x: hidden;
-        
-    }
-
-}
 
 
 

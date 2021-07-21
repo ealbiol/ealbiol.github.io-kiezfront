@@ -30,7 +30,6 @@
         flex-grow: 1;
         
             &__image-right-clip-path{
-            /* clip-path: ellipse(530px 540px at 10% 20%); */
             clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
             
         }

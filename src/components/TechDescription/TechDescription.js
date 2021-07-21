@@ -33,7 +33,8 @@ export default function TechDescription() {
 
             {/* HEROKU */}
             <div className="TechDescription-in-Technologies__heroku-description-main" >
-                <div className="Heroku-left" >HEROKU
+                <div className="Heroku-left" >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Heroku_logo.svg" alt="" />
                     <div className="TechDescription-in-Technologies__heroku-description-main__heroku-explanation" >Cloud platform that allows you to upload your app with no need of your own server. It directly connects to your Github project. </div>
                     <div className="TechDescription-in-Technologies__heroku-description-main__front-link" onClick={() => handleFront()} >https://kiezberlin.herokuapp.com/</div>
                     <div className="TechDescription-in-Technologies__heroku-description-main__front-link" onClick={() => handleBack()} >https://kiezberlinback.herokuapp.com/</div>
@@ -45,7 +46,8 @@ export default function TechDescription() {
 
             {/* SASS */}
             <div className="TechDescription-in-Technologies__heroku-description-main" >
-                <div className="Heroku-left" >SASS
+                <div className="Heroku-left" >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="" />
                     <div className="TechDescription-in-Technologies__heroku-description-main__heroku-explanation" >Sass is used with the objective to shorten the style code:
                         <div>1. The Nesting Ampersand.</div>
                         <div>2. Variables.</div>
@@ -104,7 +106,7 @@ export default function TechDescription() {
                 </div>
 
                 <div>
-                    <div>NPM Component</div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="" />
                     <img src={carousel} width={"1000px"} alt="ampersands" />
                 </div>
 

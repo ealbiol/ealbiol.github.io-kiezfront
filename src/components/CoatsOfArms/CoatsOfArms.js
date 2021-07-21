@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 import checkIfLogged from "../../Functions/Functions"
-import {BASE_URL} from "../../config/config";
+import { BASE_URL } from "../../config/config";
 
 
 
@@ -14,7 +14,6 @@ export default function CoatsOfArms({ FilteredResult }) {
 
   const [coatOfArmsImages, setcoatOfArmsImages] = useState([]);
 
-  //useContext: Recibiendo desde Router 'setFilteredResultGlobal': (ATERRIZAJE de set para recoger datos)
   const { setFilteredResultGlobal, setLoggedUser } = useContext(GlobalContext);
 
   const historyButtonFilter = useHistory();
@@ -28,7 +27,7 @@ export default function CoatsOfArms({ FilteredResult }) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": token                          //Autorización con token para el acceso a la API 'coatsofarmsimages'
+        "Authorization": token
       },
     };
     fetch(API_COATSOFARMSIMAGES, params)
@@ -42,8 +41,8 @@ export default function CoatsOfArms({ FilteredResult }) {
 
 
   function buttonFilter() {
-    setFilteredResultGlobal(FilteredResult);                    //---> useContext: Al OnClick 'FilteredResult' buelca sus datos a 'setFilteredResultGlobal'
-    historyButtonFilter.push("/filteredNeighborhoods");         //---> useHistory: Al OnClick nos reenvia a la página donde veremos la info de 'FilteredResultGlobal'
+    setFilteredResultGlobal(FilteredResult);
+    historyButtonFilter.push("/filteredNeighborhoods");
   }
 
 

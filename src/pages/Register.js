@@ -9,16 +9,6 @@ export default function Register() {
     const initialFormState = { username: "", email: "", password: "" };
     const [form, handleInputChange] = useForm(initialFormState); // Custom Hook
 
-    /*
-   EXPLICACIÓN ESTADO form
-   
-   1. El estado form se inicia teniendo como contenido inicial la constante 'initialFormState' que tiene: { username: "", email: "", password: "" }
-   2. Se añaden los eventos onClick a username, email y password que llamarán a la función 'handleInputChange'.
-   3. ... ¿¿ form va recogiendo los contenidos de cada propiedad value={form.username} ??
-
-   */
-
-
 
 
 
@@ -49,27 +39,13 @@ export default function Register() {
 
 
 
-    /*
-    EXPLICACIÓN FUNCIÓN RegisterClient() Conexión server-client
-    
-    1. La función es llamada en el evento onClick que hemos puesto en el submit del form de Register. Aquí no se recogen los datos.
-    2. e.PreventDefault() para evitar que la página refresque.
-    3. Señalamaos a que endpoint van a ir los datos. ---> /users/register"
-    3. Marcamos que es un método POST.
-    4. IMPORTANTE: El contenido que vamos a enviar es el estado 'form' que recoge los datos rellenados y el nombre de cada propiedad.
-    
-        Ejemplo: { username: "Jane", email: "jdoe@gmail.com", password: "1234" }
-    
-        ¿¿ form va recogiendo los contenidos de cada propiedad value={form.username} ??
-    5. Hacemos fetch a la API register. De este modo los datos se guardarán en dicha api. http://localhost:3000/users
-    */
+
 
 
     function ResetRegister(e) {
         handleInputChange(e)
     }
 
-    //History Button Login
     const historyLogin = useHistory()
 
     function handleLogIn() {

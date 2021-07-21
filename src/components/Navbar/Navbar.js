@@ -111,7 +111,7 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
                     )}
 
                     {
-                        localStorage?.getItem("ADMIN_TOKEN") && ( //if token exists
+                        localStorage?.getItem("ADMIN_TOKEN") && (
                             <   button className="main-navbar__right-content__buttonNavbar" onClick={handleClickBackOffice} >BACKOFFICE</button>
                         )
                     }
@@ -134,10 +134,3 @@ export default function Navbar({ loggedUser, setLoggedUser }) {
 
 
 
-/*
- LOGIN/LOGOUT RENDERIZADO
- 1. Creamos una constante global boleana (ir a Router) loggedUser la ponemos inicialmente a false.
- 2. Cuando hacemos login se obtiene el token y cambia el estado de loggedUser a true.
- 3. Cuando hacemos logout se quita el token y vuelve el estado a false.
- 4. Para los dos estados tenemos un renderizado condicional que muestra o no los div's.
- */
